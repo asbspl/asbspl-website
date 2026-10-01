@@ -1,0 +1,392 @@
+/* =========================================
+   BONDING AGENT SECTION
+========================================= */
+
+.bonding-agent-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.bonding-agent-hero {
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  padding: 50px 0;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border-top: 1px solid #7259c9;
+  border-bottom: 1px solid #7259c9;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.bonding-agent-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.40);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.bonding-agent-hero .container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE AREA
+========================================= */
+
+.bonding-agent-product-area {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.bonding-agent-product-image {
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: drop-shadow(
+    0 8px 8px rgba(0, 0, 0, 0.35)
+  );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.bonding-agent-content {
+  padding: 20px 20px 20px 10px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.bonding-agent-title {
+  margin: 0 0 30px;
+
+  font-size: clamp(34px, 4vw, 52px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: -1px;
+
+  text-shadow:
+    2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.bonding-agent-subtitle {
+  margin: 0 0 10px;
+
+  font-size: 23px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.bonding-agent-description {
+  max-width: 720px;
+
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  font-weight: 400;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================
+   INFORMATION BAR
+========================================= */
+
+.bonding-agent-info {
+  background: #ffffff;
+
+  min-height: 85px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   INFORMATION WRAPPER
+========================================= */
+
+.bonding-agent-info-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   INFORMATION ITEM
+========================================= */
+
+.bonding-agent-info-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #222222;
+
+  font-size: 16px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   CHECK ICON
+========================================= */
+
+.bonding-agent-check-icon {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #222222;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   VALUE
+========================================= */
+
+.bonding-agent-info-item strong {
+  font-weight: 400;
+
+  margin-left: 4px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .bonding-agent-content {
+    padding-left: 0;
+  }
+
+  .bonding-agent-info-wrapper {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 15px 0;
+
+    gap: 12px 25px;
+  }
+
+  .bonding-agent-info-item {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+  .bonding-agent-hero {
+    min-height: auto;
+
+    background-position: center;
+  }
+
+
+  .bonding-agent-hero .container {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+
+  /* PRODUCT IMAGE */
+
+  .bonding-agent-product-area {
+    padding-top: 15px;
+  }
+
+
+  /* CONTENT */
+
+  .bonding-agent-content {
+    text-align: center;
+
+    padding: 10px 0 30px;
+  }
+
+
+  .bonding-agent-title {
+    font-size: 34px;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .bonding-agent-subtitle {
+    font-size: 15px;
+
+    margin-top: 8px;
+  }
+
+
+  .bonding-agent-description {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  /* INFO */
+
+  .bonding-agent-info {
+    min-height: auto;
+  }
+
+
+  .bonding-agent-info-wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    padding: 12px 0;
+  }
+
+
+  .bonding-agent-info-item {
+    white-space: normal;
+
+    padding: 8px 5px;
+
+    font-size: 13px;
+
+    align-items: flex-start;
+  }
+
+
+  .bonding-agent-check-icon {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .bonding-agent-title {
+    font-size: 29px;
+  }
+
+
+  .bonding-agent-subtitle {
+    font-size: 14px;
+  }
+
+
+  .bonding-agent-description {
+    font-size: 13px;
+  }
+
+
+  .bonding-agent-info-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+
+  .bonding-agent-info-item {
+    font-size: 14px;
+
+    padding: 6px 0;
+  }
+
+}

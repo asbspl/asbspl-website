@@ -1,0 +1,275 @@
+.product-compound {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.product-compound-title {
+  width: 100%;
+  background: #f4f4f4;
+  text-align: center;
+ padding: 12px 15px 14px;
+}
+
+.product-compound-title h2 {
+  margin: 0;
+  color: #2d4f91;
+  line-height: 1.2;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   MAIN BANNER
+========================================= */
+
+.product-compound-banner {
+  position: relative;
+  background-color: #777;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  
+}
+
+.product-compound-overlay {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.product-bag-image {
+  display: block;
+  width: auto;
+  object-fit: contain;
+  padding: 50px;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.product-content {
+  color: #ffffff;
+
+  padding: 15px 25px 15px 0;
+
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.product-content h2 {
+  margin: 0 0 2px;
+  line-height: 1.2;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.product-description {
+  margin: 0 0 1px;
+  line-height: 1.35;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-points {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  line-height: 1.45;
+
+  font-weight: 500;
+}
+
+.product-points li {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.product-points li:last-child {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.product-details {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8e8e8;
+
+  padding: 12px 10px;
+}
+
+.product-details-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+    gap: 28px;
+
+  color: #3f3f3f;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.product-details-content strong {
+  font-weight: 700;
+}
+
+.separator {
+  color: #555;
+}
+
+
+/* =========================================
+   ALTERNATE VERSION
+========================================= */
+
+.product-compound-reverse
+  .product-compound-banner {
+  background-position: center;
+}
+
+.product-compound-reverse
+  .product-content {
+  padding-left: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .product-compound-title {
+   padding: 12px 15px 14px;
+  }
+
+  .product-content {
+    padding-right: 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+  .product-compound-title {
+    padding: 12px 15px 14px;
+  }
+    .product-points li:last-child {
+    font-weight: 800;
+  }
+
+
+  .product-compound-banner {
+    min-height: auto;
+
+    background-position: center;
+  }
+
+  .product-compound-overlay {
+    min-height: auto;
+
+    padding: 15px 0 20px;
+  }
+
+  .product-image-wrapper {
+    min-height: auto;
+
+    padding: 5px 15px 10px;
+  }
+
+
+  .product-content {
+    padding: 0 20px;
+
+    text-align: center;
+  }
+
+  .product-content h2 {
+    margin-bottom: 5px;
+  }
+
+
+
+  .product-points {
+
+    margin-top: 3px;
+  }
+
+  .product-details {
+    padding: 10px 12px;
+  }
+
+  .product-details-content {
+
+    line-height: 1.7;
+
+    gap: 3px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .product-details-content span {
+    margin: 0 2px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+      .product-points li:last-child {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .product-content h2 {
+    font-size: 32px;
+}
+.product-bag-image{
+        height: 400px;
+}
+
+}

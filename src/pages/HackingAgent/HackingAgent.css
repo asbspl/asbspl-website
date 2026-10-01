@@ -1,0 +1,271 @@
+/* =========================================
+   HACKING AGENT HERO
+========================================= */
+
+.hacking-agent {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hacking-agent-hero {
+    min-height: 470px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.hacking-agent-product {
+  padding: 25px 0 20px 50px;
+}
+
+.hacking-agent-image-box {
+  width: 300px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.hacking-agent-image-box img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.hacking-agent-image-box img:hover {
+  transform: scale(1.04);
+}
+
+.hacking-agent-product h3 {
+  margin-top: 18px;
+  margin-left: 55px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hacking-agent-content {
+  color: #ffffff;
+
+  padding: 30px 70px 30px 20px;
+
+  max-width: 850px;
+}
+
+.hacking-agent-content h1 {
+  margin-bottom: 28px;
+
+  font-size: 58px;
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.hacking-agent-content h4 {
+  margin-bottom: 14px;
+
+  font-size: 23px;
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.hacking-agent-content p {
+    max-width: 720px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   INFORMATION BAR
+========================================= */
+
+.hacking-agent-info {
+  min-height: 78px;
+
+  padding: 18px 30px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  color: #171717;
+}
+
+.hacking-agent-info-item {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 19px;
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+.hacking-agent-info-item .check {
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #111111;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .hacking-agent-hero {
+    min-height: auto;
+
+    padding: 40px 0;
+  }
+
+  .hacking-agent-product {
+    padding: 10px 0 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hacking-agent-image-box {
+    width: 280px;
+    height: 240px;
+  }
+
+  .hacking-agent-product h3 {
+    margin-left: 0;
+  }
+
+  .hacking-agent-content {
+    padding: 20px 30px;
+
+    text-align: center;
+
+    margin: auto;
+  }
+
+  .hacking-agent-content h1 {
+    font-size: 48px;
+  }
+
+  .hacking-agent-content h4 {
+    font-size: 21px;
+  }
+
+  .hacking-agent-content p {
+    font-size: 18px;
+  }
+
+  .hacking-agent-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hacking-agent-info-item {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+  .hacking-agent-hero {
+    padding: 30px 15px;
+  }
+
+  .hacking-agent-product {
+    padding: 0 0 25px;
+  }
+
+  .hacking-agent-image-box {
+    width: 230px;
+    height: 200px;
+  }
+
+  .hacking-agent-product h3 {
+    margin-top: 12px;
+
+    font-size: 22px;
+  }
+
+  .hacking-agent-content {
+    padding: 10px 5px;
+  }
+
+  .hacking-agent-content h1 {
+    margin-bottom: 18px;
+
+    font-size: 38px;
+  }
+
+  .hacking-agent-content h4 {
+    font-size: 18px;
+  }
+
+  .hacking-agent-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hacking-agent-info {
+    padding: 18px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .hacking-agent-info-item {
+    white-space: normal;
+
+    font-size: 16px;
+  }
+
+  .hacking-agent-info-item .check {
+    font-size: 21px;
+  }
+}

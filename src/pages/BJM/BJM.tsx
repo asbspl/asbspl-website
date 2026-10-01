@@ -174,8 +174,8 @@ const BJM: React.FC = () => {
         <WhereToUse product="bjm" />
       </div>
       <div>
- <Precautions page="page1" />
-</div>
+        <Precautions page="page1" />
+      </div>
       <div>
         <ApplicationProcess product="bjm" />
       </div>
