@@ -1,0 +1,352 @@
+/* =========================
+   MAIN SECTION
+========================= */
+
+.application-sectors-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 0px;
+  overflow: hidden;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.application-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.application-heading h2 {
+  margin: 0;
+  color: #202020;
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.application-slider-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   VIEWPORT
+========================= */
+
+.application-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 45px;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+.application-slider-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+/* =========================
+   SLIDE
+========================= */
+
+.application-slide {
+  flex: 0 0 33.333333%;
+  width: 33.333333%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.sector-card {
+  width: 100%;
+  background: #f7f7f7;
+
+  padding: 12px 12px 25px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.sector-image-wrapper {
+  width: 100%;
+  height: 330px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.sector-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+.sector-card:hover .sector-image {
+  transform: scale(1.05);
+  filter: brightness(0.92);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.sector-title {
+  color: #202020;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  margin-top: 14px;
+
+  line-height: 1.4;
+}
+
+.sector-title span {
+  font-weight: 700;
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.slider-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #202020;
+
+  font-size: 42px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.slider-arrow:hover {
+  color: #777;
+}
+
+.slider-arrow-left {
+  left: 0;
+}
+
+.slider-arrow-right {
+  right: 0;
+}
+
+.slider-arrow-left:hover {
+  transform:
+    translateY(-50%)
+    translateX(-3px);
+}
+
+.slider-arrow-right:hover {
+  transform:
+    translateY(-50%)
+    translateX(3px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+  .application-heading h2 {
+    font-size: 34px;
+  }
+
+  .application-slider-viewport {
+    margin: 0 40px;
+  }
+
+  .application-slide {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 0 8px;
+  }
+
+  .sector-image-wrapper {
+    height: 300px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .application-sectors-section {
+    padding: 28px 0 20px;
+  }
+
+  .application-heading {
+    margin-bottom: 20px;
+  }
+
+  .application-heading h2 {
+    font-size: 29px;
+    letter-spacing: -0.8px;
+  }
+
+  .application-slider-viewport {
+    margin: 0 32px;
+  }
+
+  .application-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 6px;
+  }
+
+  .sector-card {
+    padding: 4px 10px 20px;
+  }
+
+  .sector-image-wrapper {
+    height: 270px;
+    border-radius: 9px;
+  }
+
+  .sector-title {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .slider-arrow {
+    width: 30px;
+    height: 40px;
+    font-size: 32px;
+  }
+
+  .slider-arrow-left {
+    left: 0;
+  }
+
+  .slider-arrow-right {
+    right: 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .application-heading h2 {
+    font-size: 26px;
+  }
+
+  .application-slider-viewport {
+    margin: 0 27px;
+  }
+
+  .sector-image-wrapper {
+    height: 240px;
+  }
+
+  .sector-title {
+    font-size: 13px;
+  }
+}
+
+
+
+.single-image-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #DEE1E6FF;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-section-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .single-section-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .single-image-section {
+    width: 100%;
+    padding: 30px 0px;
+  }
+
+  .single-section-image {
+    width: 100%;
+    height: auto;
+  }
+}

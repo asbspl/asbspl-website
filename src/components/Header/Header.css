@@ -1,0 +1,155 @@
+.site-header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.header-navbar {
+  min-height: 76px;
+  padding: 10px 0;
+  background-color: #f3f4f6;
+}
+
+/* Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navigation */
+.header-nav {
+  align-items: center;
+  gap: 15px;
+}
+
+.header-nav .nav-link,
+.product-dropdown-btn {
+  color: #2c4c97;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 14px;
+  transition: color 0.2s ease;
+}
+
+.header-nav .nav-link:hover,
+.product-dropdown-btn:hover,
+.product-dropdown-btn:focus {
+  color: #000 !important;
+}
+
+/* Product Dropdown Button */
+.product-dropdown-btn {
+  border: 0;
+  background: transparent;
+}
+
+/* Active Navigation */
+.header-nav .nav-link.active,
+.header-nav .nav-link[aria-current="page"],
+.product-dropdown-btn.active {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.product-menu {
+  min-width: 210px;
+  padding: 8px;
+  margin-top: 8px !important;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-menu .dropdown-item {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.product-menu .dropdown-item:hover {
+  color: #0d6efd;
+  background-color: #f0f6ff;
+}
+
+.product-menu .dropdown-item.active,
+.product-menu .dropdown-item[aria-current="page"] {
+  color: #000 !important;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+/* Login */
+.header-login {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  min-width: 100px;
+  padding: 9px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-btn.active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .header-nav {
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 0;
+  }
+
+  .header-nav .nav-link,
+  .product-dropdown-btn {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: left;
+  }
+
+  .product-menu {
+    width: 100%;
+    margin-top: 0 !important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #f8f9fa;
+  }
+
+  .header-login {
+    width: 100%;
+    margin-top: 12px;
+    padding-bottom: 10px;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .logo-image {
+    width: 125px;
+  }
+
+  .header-navbar {
+    min-height: 65px;
+  }
+}

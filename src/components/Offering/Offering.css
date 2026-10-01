@@ -1,0 +1,304 @@
+/* =========================================
+   OFFERING SECTION
+========================================= */
+
+.offering-section {
+  width: 100%;
+  background: #dfe3e9;
+  padding: 70px 20px;
+  box-sizing: border-box;
+}
+
+.offering-section .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.offering-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.offering-eyebrow {
+  display: block;
+  color: #777f89;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.offering-header h2 {
+  margin: 0;
+  color: #2f549d;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.offering-line {
+  width: 55px;
+  height: 3px;
+  background: #2f549d;
+  margin: 15px auto 0;
+  border-radius: 10px;
+}
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.offering-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 281px));
+  gap: 40px;
+  justify-content: center;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.offering-card {
+  width: 100%;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.offering-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.offering-image-box {
+  width: 100%;
+  min-height: 200px;
+
+  background: #2f549d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+}
+
+.offering-image {
+  display: block;
+
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  max-height: 160px;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.offering-card:hover .offering-image {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   TITLE AREA
+========================================= */
+
+.offering-content {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 20px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.offering-content h3 {
+  margin: 0;
+
+  color: #303030;
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .offering-section {
+    padding: 60px 20px;
+  }
+
+  .offering-header {
+    margin-bottom: 35px;
+  }
+
+  .offering-header h2 {
+    font-size: 32px;
+  }
+
+  .offering-grid {
+    grid-template-columns: repeat(2, minmax(0, 281px));
+    gap: 30px;
+  }
+
+  .offering-image-box {
+    min-height: 190px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET / LARGE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .offering-section {
+    padding: 50px 18px;
+  }
+
+  .offering-header {
+    margin-bottom: 30px;
+  }
+
+  .offering-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .offering-header h2 {
+    font-size: 28px;
+  }
+
+  .offering-grid {
+    grid-template-columns: minmax(0, 420px);
+    gap: 20px;
+  }
+
+  .offering-card {
+    width: 100%;
+  }
+
+  .offering-image-box {
+    min-height: 200px;
+  }
+
+  .offering-content {
+    min-height: 65px;
+  }
+
+  .offering-content h3 {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .offering-section {
+    padding: 45px 15px;
+  }
+
+  .offering-header h2 {
+    font-size: 25px;
+  }
+
+  .offering-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .offering-image-box {
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  .offering-image {
+    max-width: 160px;
+    max-height: 140px;
+  }
+
+  .offering-content {
+    min-height: 65px;
+    padding: 12px 15px;
+  }
+
+  .offering-content h3 {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .offering-section {
+    padding: 40px 12px;
+  }
+
+  .offering-header {
+    margin-bottom: 25px;
+  }
+
+  .offering-header h2 {
+    font-size: 23px;
+  }
+
+  .offering-image-box {
+    min-height: 160px;
+  }
+
+  .offering-image {
+    max-width: 140px;
+    max-height: 120px;
+  }
+
+  .offering-content h3 {
+    font-size: 12px;
+  }
+}

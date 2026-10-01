@@ -1,0 +1,320 @@
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services-section {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 54px 0;
+}
+
+.services-row {
+  align-items: center;
+}
+
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.services-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.services-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.services-content {
+  padding-left: 20px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.services-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #555555;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.services-title {
+  margin: 0 0 12px;
+
+  color: #292929;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.services-description {
+
+    margin: 0 0 20px;
+    color: #1554ad;
+    font-weight: 500;
+    line-height: 1.45;
+    font-size: 19px;
+}
+
+
+/* =========================================
+   MISSION / VISION ROW
+========================================= */
+
+.services-info-row {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TAB BUTTON
+========================================= */
+
+.services-tab {
+    /* flex: 0 0 87px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    padding: 2px 40px;
+    border: 1px solid #1262b7;
+    background: transparent;
+    color: #1262b7;
+    /* font-size: 15px; */
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    /* width: 40px; */
+}
+
+.services-tab-active {
+  background: #0860b8;
+  border-color: #0860b8;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   INFO TEXT
+========================================= */
+
+.services-info-text {
+    margin-left: 18px;
+    color: #4c4c4c;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FEATURES LIST
+========================================= */
+
+.services-features {
+  list-style: none;
+
+  margin: 17px 0 0;
+  padding: 0;
+}
+
+.services-features li {
+  position: relative;
+
+  margin-bottom: 8px;
+  padding-left: 13px;
+
+  color: #555555;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+
+/* Small square before each item */
+.services-features li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 11px;
+  left: 0;
+
+  width: 5px;
+  height: 5px;
+
+  border: 1px solid #1554ad;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+  .services-section {
+    padding: 54px 0;
+  }
+
+
+  .services-content {
+    padding-left: 20px;
+  }
+
+  .services-title {
+    font-size: 45px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+  .services-section {
+    padding: 45px 0;
+  }
+
+  .services-content {
+    padding-left: 10px;
+  }
+
+  .services-image-wrapper {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 767.98px) {
+  .services-section {
+    padding: 40px 0;
+  }
+
+  .services-image-wrapper {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .services-content {
+    padding-left: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+  .services-section {
+    padding: 35px 0;
+  }
+
+  .services-image-wrapper {
+    height: 250px;
+    margin-bottom: 25px;
+  }
+
+  .services-eyebrow {
+    letter-spacing: 1.5px;
+  }
+
+  .services-title {
+    line-height: 1;
+    letter-spacing: -0.7px;
+  }
+
+  .services-description {
+    line-height: 1.5;
+  }
+
+  .services-info-row {
+    align-items: flex-start;
+    display: block;
+  }
+
+  .services-tab {
+    flex: 0 0 82px;
+
+    height: 29px;
+        padding: 20px 40px;
+        margin-bottom: 15px;
+
+  }
+
+  .services-info-text {
+    line-height: 1.45;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .services-features {
+    margin-top: 18px;
+  }
+
+  .services-features li {
+    margin-bottom: 9px;
+
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
