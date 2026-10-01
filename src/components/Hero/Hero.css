@@ -1,0 +1,378 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    background-image: url("../../assets/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+/* =========================================
+   HEADER / CONTACT
+========================================= */
+
+.hero-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: 5;
+
+    padding: 30px 5vw;
+}
+
+.hero-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #ffffff;
+
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.phone-icon {
+    color: #f5b72c;
+    font-size: 1.05em;
+}
+
+.hero-phone:hover {
+    color: #f5b72c;
+    transform: translateY(-2px);
+}
+
+.hero-phone:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 6px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Small heading */
+
+.hero-subtitle {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: #f5b72c;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero-subtitle::before {
+    content: "";
+
+    width: 40px;
+    height: 2px;
+
+    background: #f5b72c;
+}
+
+
+/* =========================================
+   MAIN H1
+========================================= */
+
+.hero-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(3rem,
+            6vw,
+            6rem);
+
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+    font-family: "Archivo", sans-serif;
+}
+
+.hero-title span {
+    display: block;
+
+    color: #f5b72c;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-title {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-size: 92px;
+    font-family: Archivo;
+}
+
+.hero-button {
+    background: #2C4C97FF;
+    border: 0px;
+    color: white;
+    padding: 8px 20px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/* =========================================
+   AI CHATBOT
+========================================= */
+
+.ai-chatbot {
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 8px 8px 8px;
+
+    color: #ffffff;
+
+    background: #111827;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition:
+        all 0.25s ease;
+}
+
+.ai-chatbot:hover {
+    color: #111827;
+
+    background: #f5b72c;
+
+    transform: translateY(-4px);
+}
+
+.ai-chatbot:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+
+/* Chat icon */
+
+.ai-chatbot-icon {
+    display: grid;
+    place-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: #ffffff;
+
+    background: #f5b72c;
+
+    border-radius: 50%;
+}
+
+.ai-chatbot-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.ai-chatbot:hover .ai-chatbot-icon {
+    color: #111827;
+    background: #ffffff;
+}
+
+.hero-description{
+    line-height: 70px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(5, 12, 22, 0.94),
+                rgba(5, 12, 22, 0.70));
+    }
+
+    .hero-header {
+        padding-right: 6%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+    .hero-section {
+
+        align-items: flex-end;
+
+        background-position: 65% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(5, 12, 22, 0.72) 0%,
+                rgba(5, 12, 22, 0.78) 35%,
+                rgba(5, 12, 22, 0.96) 100%);
+    }
+
+    .hero-header {
+        width: 100%;
+
+        padding: 20px;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-phone {
+        font-size: 1rem;
+    }
+
+
+
+    .hero-subtitle {
+        margin-bottom: 15px;
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.1em;
+    }
+
+    .hero-subtitle::before {
+        width: 25px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.7rem,
+                12vw,
+                4rem);
+
+        line-height: 1;
+    }
+
+    .hero-description {
+        margin: 24px 0 28px;
+
+        font-size: 0.98rem;
+
+        line-height:23px;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    /* Mobile chatbot becomes circular */
+
+    .ai-chatbot {
+        left: auto;
+        right: 18px;
+        bottom: 18px;
+
+        width: 54px;
+        height: 54px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .ai-chatbot-label {
+        display: none;
+    }
+
+    .ai-chatbot-icon {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-phone,
+    .hero-btn,
+    .hero-btn .arrow,
+    .ai-chatbot {
+        transition: none;
+    }
+}
