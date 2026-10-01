@@ -1,0 +1,455 @@
+/* =========================================
+   DOCUMENTATION SECTION
+========================================= */
+
+.documentation-section {
+  padding: 10px;
+}
+
+
+/* =========================================
+   DOWNLOAD CONTAINER
+========================================= */
+
+.download-section {
+  position: relative;
+
+  margin-top: 70px;
+  margin-bottom: 80px;
+
+  padding: 38px 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  background: #ffffff;
+
+  border: 1px solid #e9e9e7;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.025);
+
+  overflow: hidden;
+}
+
+
+/* Subtle background decoration */
+
+.download-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -140px;
+  top: -160px;
+
+  background: rgba(0, 0, 0, 0.025);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.download-left {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  max-width: 560px;
+}
+
+
+/* =========================================
+   DOWNLOAD ICON
+========================================= */
+
+.download-icon {
+  flex-shrink: 0;
+
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2c4c97;
+
+  color: #ffffff;
+
+  border-radius: 18px;
+
+  font-size: 40px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.download-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #888888;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.download-left h3 {
+  margin: 0;
+
+  color: #161616;
+
+  font-size: 25px;
+
+  font-weight: 650;
+
+  letter-spacing: -0.5px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.download-left p {
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  max-width: 470px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.download-actions {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-button {
+  min-width: 215px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================
+   BUTTON ICON
+========================================= */
+
+.button-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   BUTTON CONTENT
+========================================= */
+
+.button-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.button-content strong {
+  font-size: 13px;
+
+  font-weight: 650;
+
+  line-height: 1.2;
+}
+
+.button-content small {
+  font-size: 10px;
+
+  color: inherit;
+
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.button-arrow {
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.download-button.primary {
+  color: #ffffff;
+
+  background: #2c4c97;
+
+  border: 1px solid #111111;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.download-button.primary .button-icon {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.download-button.primary:hover {
+  transform: translateY(-3px);
+}
+
+.download-button.primary:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.download-button.secondary {
+  color: #202020;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e4e1;
+}
+
+.download-button.secondary .button-icon {
+  color: #222222;
+
+  background: #f4f4f2;
+}
+
+.download-button.secondary:hover {
+  color: #202020;
+
+  transform: translateY(-3px);
+
+  border-color: #d4d4d0;
+
+  background: #fafaf9;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.download-button.secondary:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .download-section {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    padding: 32px;
+  }
+
+  .download-left {
+    max-width: none;
+  }
+
+  .download-actions {
+    width: 100%;
+  }
+
+  .download-button {
+    flex: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .documentation-section {
+    padding: 10px 0;
+  }
+
+  .download-section {
+    margin-top: 25px;
+
+    margin-bottom: 50px;
+
+    padding: 20px 17px;
+
+    border-radius: 20px;
+
+    gap: 26px;
+  }
+
+  .download-left {
+    align-items: flex-start;
+
+    gap: 13px;
+  }
+
+  .download-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+  }
+
+  .download-left h3 {
+    font-size: 17px;
+  }
+
+  .download-left p {
+    font-size: 11px;
+  }
+
+  .download-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .download-button {
+    width: 100%;
+
+    min-width: 0;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .download-left {
+    flex-direction: column;
+  }
+
+  .download-icon {
+    margin-bottom: 3px;
+  }
+
+  .download-label {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .download-left h3 {
+    font-size: 19px;
+  }
+
+  .download-left p {
+    font-size: 12px;
+  }
+
+  .download-button {
+    padding: 11px;
+  }
+
+  .button-icon {
+    width: 39px;
+    height: 39px;
+  }
+}

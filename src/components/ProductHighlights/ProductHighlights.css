@@ -1,0 +1,357 @@
+/* =========================================
+   PRODUCT HIGHLIGHTS
+========================================= */
+
+.product-highlights {
+  width: 100%;
+  padding: 100px 0;
+
+  overflow: hidden;
+
+  background-color: #ffffff;
+
+  font-family: "Archivo", sans-serif;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.product-highlights-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background-color: #f4f4f4;
+}
+
+.product-highlights-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(245, 183, 44, 0.08),
+      transparent 50%
+    );
+}
+
+.product-highlights-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.product-highlights-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.product-highlights-content {
+  width: 100%;
+  max-width: 650px;
+border: 1px solid #a3a3a3;
+    padding: 23px;
+    border-radius: 10px;
+  padding-left: 10px;
+}
+
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.product-highlights-content h2 {
+  margin: 0 0 8px;
+
+  color:#2c4c97;
+
+  font-family: "Archivo", sans-serif;
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   COMPANY NAME
+========================================= */
+
+.product-highlights-content h3 {
+  margin: 0 0 22px;
+
+  color: #3d3d3d;
+
+  font-size: clamp(
+    1rem,
+    1.5vw,
+    1.2rem
+  );
+
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.product-intro {
+  max-width: 620px;
+
+  margin: 0 0 20px;
+
+  color: #666666;
+
+  font-size: 1rem;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   HIGHLIGHT ICON
+========================================= */
+
+.highlight-icon {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  color: #2c4c97;
+
+  background-color: #f5b72c;
+
+  border-radius: 50%;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+
+
+
+/* =========================================
+   HIGHLIGHT CONTENT
+========================================= */
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-content h4 {
+  margin: 0 0 7px;
+
+  color: #2c4c97;
+
+  font-size: 1.2rem;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+.highlight-content p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: #686868;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CORE VALUE
+========================================= */
+
+.core-value {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 35px;
+  padding: 20px 24px;
+
+  border-left: 4px solid #f5b72c;
+
+  background-color: #f8f8f8;
+}
+
+.core-value span {
+  color: #777777;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.core-value strong {
+  color: #2c4c97;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+  .product-highlights {
+    padding: 120px 0;
+  }
+
+  .product-highlights-content {
+    padding-left: 25px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+  .product-highlights {
+    padding: 80px 0;
+  }
+
+  .product-highlights-image,
+  .product-highlights-image img {
+    min-height: 480px;
+  }
+
+  .product-highlights-content {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+  .product-highlights {
+    padding: 60px 0;
+  }
+
+  .product-highlights-image,
+  .product-highlights-image img {
+    min-height: 340px;
+  }
+
+
+  .product-highlights-content h3 {
+    font-size: 1rem;
+  }
+
+  .product-intro {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+
+  .highlight-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 0.85rem;
+  }
+
+
+  .highlight-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.9rem;
+  }
+
+  .core-value {
+    padding: 17px 18px;
+  }
+
+  .core-value strong {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .product-highlights-image img {
+    transition: none;
+  }
+
+  .product-highlights-image:hover img {
+    transform: none;
+  }
+}

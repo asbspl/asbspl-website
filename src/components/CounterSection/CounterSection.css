@@ -1,0 +1,281 @@
+.counter-section {
+  position: relative;
+  padding: 80px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Subtle background */
+.counter-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  left: -200px;
+
+  background: rgba(45, 85, 155, 0.05);
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+}
+
+.counter-section::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+
+  bottom: -300px;
+  right: -200px;
+
+  background: rgba(212, 168, 75, 0.06);
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+}
+
+
+/* ===================================
+   Wrapper
+=================================== */
+
+.counter-wrapper {
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.06),
+    0 5px 20px rgba(0, 0, 0, 0.03);
+
+  overflow: hidden;
+}
+
+
+/* ===================================
+   Columns
+=================================== */
+
+.counter-column {
+  position: relative;
+
+  border-right: 1px solid #eeeeee;
+}
+
+.counter-column:last-child {
+  border-right: none;
+}
+
+
+/* ===================================
+   Card
+=================================== */
+
+.counter-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 45px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+
+/* Hover */
+.counter-card:hover {
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f8faff 100%
+  );
+
+  transform: translateY(-5px);
+}
+
+
+/* ===================================
+   Large Icon
+=================================== */
+
+.counter-icon-wrapper {
+  position: relative;
+
+  width: 82px;
+  height: 82px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    #f3f6fc,
+    #e8eef9
+  );
+
+  border: 1px solid rgba(45, 85, 155, 0.1);
+
+  box-shadow:
+    0 12px 30px rgba(45, 85, 155, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Icon itself */
+.counter-icon {
+  width: 44px;
+  height: 44px;
+
+  color: #2d559b;
+
+  stroke-width: 1.5;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+
+/* Icon hover */
+.counter-card:hover .counter-icon-wrapper {
+  transform: translateY(-5px) scale(1.05);
+
+  box-shadow:
+    0 18px 40px rgba(45, 85, 155, 0.18);
+}
+
+.counter-card:hover .counter-icon {
+  color: #1f427d;
+
+  transform: scale(1.08);
+}
+
+
+/* ===================================
+   Number
+=================================== */
+
+.counter-number {
+  position: relative;
+
+  color: #172b4d;
+
+  font-size: 44px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -1.5px;
+
+  font-family: "Inter", sans-serif;
+}
+
+.counter-number span {
+  color: #2d559b;
+
+  font-size: 32px;
+
+  margin-left: 2px;
+}
+
+
+/* ===================================
+   Label
+=================================== */
+
+.counter-label {
+  margin-top: 14px;
+
+  color: #7c8798;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+
+/* ===================================
+   Gold accent line
+=================================== */
+
+.counter-line {
+  width: 35px;
+  height: 3px;
+
+  margin-top: 18px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #c99a3d,
+    #e7c675
+  );
+
+  transition:
+    width 0.4s ease;
+}
+
+.counter-card:hover .counter-line {
+  width: 60px;
+}
+
+
+/* ===================================
+   Glow
+=================================== */
+
+.counter-glow {
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  top: -60px;
+  right: -60px;
+
+  border-radius: 50%;
+
+  background: rgba(45, 85, 155, 0.05);
+
+  filter: blur(10px);
+
+  transition: transform 0.5s ease;
+}
+
+.counter-card:hover .counter-glow {
+  transform: scale(1.5);
+}
