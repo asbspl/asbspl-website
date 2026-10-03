@@ -16,12 +16,12 @@ import page1Precaution6 from "../../assets/precaution6.png";
 // PAGE 2 IMAGES
 // ============================================
 
-import page2Precaution1 from "../../assets/precaution1.png";
-import page2Precaution2 from "../../assets/precaution1.png";
-import page2Precaution3 from "../../assets/precaution1.png";
-import page2Precaution4 from "../../assets/precaution1.png";
-import page2Precaution5 from "../../assets/precaution1.png";
-import page2Precaution6 from "../../assets/precaution1.png";
+import page2Precaution1 from "../../assets/precaution7.png";
+import page2Precaution2 from "../../assets/precaution8.png";
+import page2Precaution3 from "../../assets/precaution9.png";
+import page2Precaution4 from "../../assets/precaution10.png";
+import page2Precaution5 from "../../assets/precaution11.png";
+// import page2Precaution6 from "../../assets/precaution12.png";
 
 // ============================================
 // TYPES
@@ -82,29 +82,26 @@ const Precautions: React.FC<PrecautionsProps> = ({
 
   const page2Items: PrecautionItem[] = [
     {
-      title: "Keep the product away from direct sunlight",
+      title: "Dirty Or Dusty Surface",
       image: page2Precaution1,
     },
     {
-      title: "Avoid contact with water",
+      title: "Uneven Surface",
       image: page2Precaution2,
     },
     {
-      title: "Always use clean tools",
+      title: "Check Moisture",
       image: page2Precaution3,
     },
     {
-      title: "Close the container after use",
+      title: "Avoid Direct Sunlight Or Rain",
       image: page2Precaution4,
     },
     {
-      title: "Do not use during heavy rain",
+      title: "Personal Protection",
       image: page2Precaution5,
     },
-    {
-      title: "Wear suitable protective equipment",
-      image: page2Precaution6,
-    },
+
   ];
 
   // ============================================

@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ProductsSlider.css";
 
-import product1 from "../../assets/product-1.png";
-import product2 from "../../assets/product-2.png";
-import product3 from "../../assets/product-3.png";
-import product4 from "../../assets/product-1.png";
-import product5 from "../../assets/product-2.png";
+import product1 from "../../assets/bjm.png";
+import product2 from "../../assets/t100.png";
+import product3 from "../../assets/t200.png";
+import product6 from "../../assets/plaster.png";
+import product4 from "../../assets/plaster-river-sand.png";
+import product5 from "../../assets/bonding-agent.png";
+import product7 from "../../assets/hackoplast-straight.png";
 
 interface Product {
   id: number;
@@ -14,52 +16,71 @@ interface Product {
   category: string;
   image: string;
   alt: string;
+  route: string;
 }
 
 const products: Product[] = [
   {
     id: 1,
-    name: "Rockstar Bonding Agent",
-    category: "Bonding Agent",
+    name: "Block Jointing Mortar",
+    category: "Block Jointing Mortar",
     image: product1,
-    alt: "Rockstar Bonding Agent",
+    alt: "High-performance Block Jointing Mortar",
+    route: "/products/BJM",
   },
   {
     id: 2,
-    name: "Rockstar Bonding Agent",
-    category: "Bonding Agent",
+    name: "T100",
+    category: "Tile Adhesives",
     image: product2,
-    alt: "Rockstar Bonding Agent construction material",
+    alt: "High-strength adhesives for durable tile fixing",
+    route: "/products/TileAdhesive",
   },
   {
     id: 3,
-    name: "Rockstar Block Jointing Mortar",
-    category: "Block Jointing Mortar",
+    name: "T200",
+    category: "Tile Adhesives",
     image: product3,
-    alt: "Rockstar Block Jointing Mortar",
+    alt: "High-strength adhesives for durable tile fixing",
+    route: "/products/TileAdhesive",
   },
   {
     id: 4,
-    name: "Rockstar Construction Material",
-    category: "Construction Material",
+    name: "T300",
+    category: "Tile Adhesives",
     image: product4,
-    alt: "Rockstar construction material",
+    alt: "High-strength adhesives for durable tile fixing",
+    route: "/products/TileAdhesive",
   },
   {
     id: 5,
-    name: "Rockstar Construction Mix",
-    category: "Construction Mix",
+    name: "Premix Plaster",
+    category: "Premix Plaster",
     image: product5,
-    alt: "Rockstar construction mix",
+    alt: "High-Performance Ready Mix Plaster",
+    route: "/products/PREMIXPlaster",
+  },
+  {
+    id: 6,
+    name: "Premix Plaster",
+    category: "Premix Plaster",
+    image: product6,
+    alt: "High-Performance Ready Mix Plaster",
+    route: "/products/PREMIXPlaster",
+  },
+  {
+    id: 7,
+    name: "Hackoplast Straight",
+    category: "Hacking Agent",
+    image: product7,
+    alt: "Hackoplast Straight Hacking Agent",
+    route: "/products/HackingAgent",
   },
 ];
 
 const ProductsSlider = () => {
   const [activeIndex, setActiveIndex] = useState(2);
 
-  /*
-   * Automatically rotate products
-   */
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) =>
@@ -70,37 +91,22 @@ const ProductsSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  /*
-   * Get product index based on position
-   */
   const getIndex = (offset: number): number => {
-    return (
-      (activeIndex + offset + products.length) %
-      products.length
-    );
+    return (activeIndex + offset + products.length) % products.length;
   };
 
-  /*
-   * Previous
-   */
   const handlePrevious = () => {
     setActiveIndex((current) =>
       current === 0 ? products.length - 1 : current - 1
     );
   };
 
-  /*
-   * Next
-   */
   const handleNext = () => {
     setActiveIndex((current) =>
       current === products.length - 1 ? 0 : current + 1
     );
   };
 
-  /*
-   * Five positions around the center
-   */
   const positions = [-2, -1, 0, 1, 2];
 
   return (
@@ -138,7 +144,7 @@ const ProductsSlider = () => {
                   className={`products-slide position-${offset}`}
                 >
                   <Link
-                    to={`/products/${product.id}`}
+                    to={product.route}
                     className="products-slide-link"
                     aria-label={`View ${product.name}`}
                   >
@@ -170,7 +176,7 @@ const ProductsSlider = () => {
 
         <div className="products-slider-info">
           <Link
-            to={`/products/${products[activeIndex].id}`}
+            to={products[activeIndex].route}
             className="products-slider-info-link"
           >
             <h3>{products[activeIndex].name}</h3>

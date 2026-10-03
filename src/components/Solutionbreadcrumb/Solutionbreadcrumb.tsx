@@ -1,5 +1,6 @@
 import React from "react";
 import "./Solutionbreadcrumb.css";
+import { Link } from "react-router-dom";
 
 interface ConstructionStage {
   label: string;
@@ -69,19 +70,14 @@ const Solutionbreadcrumb: React.FC = () => {
                   </p>
 
                   <div className="solution-breadcrumb__actions">
-                    <a
-                      href="#products"
-                      className=" solution-breadcrumb__btn solution-breadcrumb__btn--primary"
-                    >
-                      Explore Products
-                    </a>
 
-                    <a
-                      href="#contact"
-                      className=" solution-breadcrumb__btn solution-breadcrumb__btn--secondary"
-                    >
+                    <Link className=" solution-breadcrumb__btn solution-breadcrumb__btn--primary" to="/products/TileAdhesive">
+                      Explore products 
+                    </Link>
+
+                     <Link className=" solution-breadcrumb__btn solution-breadcrumb__btn--secondary" to="/contact">
                       Get Expert Advice
-                    </a>
+                    </Link>
                   </div>
 
                   <p className="solution-breadcrumb__tagline">

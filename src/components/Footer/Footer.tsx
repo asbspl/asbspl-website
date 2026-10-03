@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import logoMark from "../../assets/logo-mark.png";
-import footerLogo from "../../assets/header-logo.png";
+import footerLogo from "../../assets/footer-logo.png";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
@@ -19,11 +18,6 @@ const Footer: React.FC = () => {
                             className="footer-logo"
                             aria-label="A S Building Solutions Pvt Ltd - Home"
                         >
-                            <img
-                                src={logoMark}
-                                alt=""
-                                className="logo-mark"
-                            />
                             <img
                                 src={footerLogo}
                                 alt="A S Building Solutions Pvt Ltd"
