@@ -49,10 +49,14 @@
 
 /* Logo */
 .footer-logo {
-  display: inline-flex;
   align-items: center;
   margin-top: -27px;
   text-decoration: none;
+}
+
+.footer-logo img{
+      height: 65px;
+      margin-bottom: 20px;
 }
 
 
@@ -225,7 +229,6 @@
   }
 
   .logo-text {
-    width: min(200px, calc(100vw - 90px));
     height: auto;
     max-width: 100%;
   }
@@ -242,12 +245,13 @@
     margin-top: 0;
   }
 
-  .logo-text {
-    width: min(180px, calc(100vw - 75px));
-  }
+
     .footer-bottom-content{
     justify-content: center;
 
   }
+  .footer-logo img {
+    height: 50px;
+}
   
 }

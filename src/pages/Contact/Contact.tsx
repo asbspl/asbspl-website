@@ -39,28 +39,20 @@ const Contact = () => {
 
     const formData = new FormData(form);
 
+    // Web3Forms Access Key
     const accessKey =
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4";
 
-    if (!accessKey) {
-      setStatus({
-        type: "error",
-        message:
-          "Web3Forms access key is missing. Please check your .env file.",
-      });
-
-      setIsSending(false);
-
-      return;
-    }
-
+    // Add Web3Forms Access Key
     formData.append("access_key", accessKey);
 
+    // Email subject
     formData.append(
       "subject",
-      "New Contact Enquiry - Rockstar"
+      "New Contact Enquiry - Rockstar Website"
     );
 
+    // Sender name
     formData.append(
       "from_name",
       "Rockstar Website"
@@ -161,8 +153,8 @@ const Contact = () => {
 
                   <h6>Email</h6>
 
-                  <a href="mailto:contact@rockstar.com">
-                    contact@rockstar.com
+                  <a href="mailto:tech@asbspl.com">
+                    tech@asbspl.com
                   </a>
 
                 </div>
@@ -183,7 +175,10 @@ const Contact = () => {
                   <h6>Address</h6>
 
                   <p>
-                    Vishwa Vimal Complex,Opp. Hyundai Kothari Showroom,Next to Titan I Plus Showroom, Magarpatta-Kharadi Road, Kharadi,Pune - 411 014, MH India.
+                    Vishwa Vimal Complex, Opp. Hyundai
+                    Kothari Showroom, Next to Titan I Plus
+                    Showroom, Magarpatta-Kharadi Road,
+                    Kharadi, Pune - 411 014, MH India.
                   </p>
 
                 </div>
@@ -197,7 +192,7 @@ const Contact = () => {
 
               <div className="contact-socials">
 
-                <a 
+                <a
                   className="facebook"
                   href="#"
                   aria-label="Facebook"
@@ -214,7 +209,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                 className="linkedIn"
+                  className="linkedIn"
                   href="#"
                   aria-label="LinkedIn"
                 >
@@ -244,14 +239,12 @@ const Contact = () => {
                 Get In Touch With Us
               </h2>
 
-
               <form
                 onSubmit={handleSubmit}
                 className="contact-form"
               >
 
                 <div className="row contact-form-row">
-
 
                   {/* NAME */}
 
@@ -393,11 +386,9 @@ const Contact = () => {
                       className="contact-submit-btn"
                       disabled={isSending}
                     >
-
                       {isSending
                         ? "Sending..."
                         : "Send Message"}
-
                     </button>
 
                   </div>
@@ -407,9 +398,7 @@ const Contact = () => {
               </form>
 
 
-              {/* ==================================================
-                  STATUS MESSAGE
-              ================================================== */}
+              {/* STATUS MESSAGE */}
 
               {status.message && (
                 <div
@@ -434,12 +423,16 @@ const Contact = () => {
       ================================================== */}
 
       <section className="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d71967.49671740862!2d73.96670146260276!3d18.55935274873523!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bc2c3a5f602c5b7%3A0xac911644b7f6618a!2sA%20S%20Building%20Solutions%20Pvt%20Ltd%2C%20Flat%20No.04%2C%20Vishwa%20Vimal%20Complex%2C%20S.No.%2011%2C%20nr.%20Titan%20Eye%20Plus%20Showroom%2C%20Sambhaji%20Nagar%2C%20Kharadi%2C%20Pune%2C%20Maharashtra%20411014!3m2!1d18.5473633!2d73.9359971!5e0!3m2!1sen!2sin!4v1790857732068!5m2!1sen!2sin" width="100%"
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d71967.49671740862!2d73.96670146260276!3d18.55935274873523!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bc2c3a5f602c5b7%3A0xac911644b7f6618a!2sA%20S%20Building%20Solutions%20Pvt%20Ltd%2C%20Flat%20No.04%2C%20Vishwa%20Vimal%20Complex%2C%20S.No.%2011%2C%20nr.%20Titan%20Eye%20Plus%20Showroom%2C%20Sambhaji%20Nagar%2C%20Kharadi%2C%20Pune%2C%20Maharashtra%20411014!3m2!1d18.5473633!2d73.9359971!5e0!3m2!1sen!2sin!4v1790857732068!5m2!1sen!2sin"
+          width="100%"
           height="350"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"></iframe>
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
 
       </section>
 
@@ -448,5 +441,4 @@ const Contact = () => {
 };
 
 export default Contact;
-
 

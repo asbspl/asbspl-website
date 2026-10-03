@@ -163,6 +163,10 @@
     font-weight: 500;
     border-radius: 6px;
 }
+.hero-button a{
+        color: white;
+    text-decoration: none;
+}
 
 /* =========================================
    AI CHATBOT

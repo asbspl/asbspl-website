@@ -37,8 +37,16 @@ import processImg32 from "../../assets/processImg32.png";
 import processImg33 from "../../assets/processImg33.png";
 import processImg34 from "../../assets/processImg34.png";
 
+// ================= PDF BROCHURES =================
 
+import BJMBrochure from "../../assets/rockstar product brochure_BJM.pdf";
+import PremixBrochure from "../../assets/rockstar product brochure_primix_plaster.pdf";
+import BondingAgentBrochure from "../../assets/rockstar product brochure_BONDING_AGENT.pdf";
+import HackingAgentBrochure from "../../assets/rockstar product brochure_HACKOPLAST.pdf";
+import TileAdhesiveBrochure from "../../assets/rockstar product brochure_tile_adesive.pdf";
+import StuccoPlaster from "../../assets/rockstar product brochure_STUCCO_PLASTER.pdf";
 
+// ================= TYPES =================
 
 interface ProcessStep {
   title: string;
@@ -47,10 +55,22 @@ interface ProcessStep {
 }
 
 interface ApplicationProcessProps {
-  product: "tileAdhesive" | "bjm" | "premixplasters" | "bondingAgent" | "hackingAgent";
+  product:
+    | "tileAdhesive"
+    | "bjm"
+    | "premixplasters"
+    | "bondingAgent"
+    | "hackingAgent"
+    | "stuccoPlaster";
 }
 
+// ================= DATA =================
+
 const applicationProcessData = {
+  // =====================================================
+  // TILE ADHESIVE
+  // =====================================================
+
   tileAdhesive: {
     title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
@@ -131,15 +151,17 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/technical-datasheet.pdf",
-      safetySheet:
-        "/documents/safety-sheet.pdf",
+      technicalDatasheet: TileAdhesiveBrochure,
+      safetySheet: TileAdhesiveBrochure,
     },
   },
 
+  // =====================================================
+  // BJM
+  // =====================================================
+
   bjm: {
-    title: " APPLICATION PROCESS",
+    title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
 
     steps: [
@@ -156,7 +178,7 @@ const applicationProcessData = {
         image: processImg14,
       },
       {
-        title: " Mechanical Mixing ",
+        title: "Mechanical Mixing",
         description:
           "Stir with an electric mixer until lump-free.",
         image: processImg15,
@@ -182,12 +204,14 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/waterproofing-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/waterproofing-safety-sheet.pdf",
+      technicalDatasheet: BJMBrochure,
+      safetySheet: BJMBrochure,
     },
   },
+
+  // =====================================================
+  // PREMIX PLASTERS
+  // =====================================================
 
   premixplasters: {
     title: "GROUT APPLICATION",
@@ -207,25 +231,25 @@ const applicationProcessData = {
         image: processImg22,
       },
       {
-        title: " Mechanical Mixing  ",
+        title: "Mechanical Mixing",
         description:
           "Stir with an electric mixer until lump-free.",
         image: processImg15,
       },
       {
-        title: "  Application",
+        title: "Application",
         description:
           "Apply plaster evenly on the wall using a trowel. Maintain uniform thickness.",
         image: processImg16,
       },
       {
-        title: " Leveling",
+        title: "Leveling",
         description:
           "Level the surface using a straight edge for a smooth and even finish.",
         image: processImg20,
       },
       {
-        title: " Water Curing ",
+        title: "Water Curing",
         description:
           "Cure the plaster by sprinkling water for 2–3 days.",
         image: processImg21,
@@ -233,14 +257,17 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/grout-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/grout-safety-sheet.pdf",
+      technicalDatasheet: PremixBrochure,
+      safetySheet: PremixBrochure,
     },
   },
+
+  // =====================================================
+  // BONDING AGENT
+  // =====================================================
+
   bondingAgent: {
-    title: " APPLICATION PROCESS",
+    title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
 
     steps: [
@@ -253,25 +280,25 @@ const applicationProcessData = {
       {
         title: "Stir Thoroughly",
         description:
-          "Mix bonding agent well before use",
+          "Mix bonding agent well before use.",
         image: processImg25,
       },
       {
         title: "Use Proper Tools",
         description:
-          "Apply using a good quality brush or roller for uniform coating",
+          "Apply using a good quality brush or roller for uniform coating.",
         image: processImg26,
       },
       {
-        title: " Dampen Surface",
+        title: "Dampen Surface",
         description:
-          "Lightly moisten the surface before applying bonding agent",
+          "Lightly moisten the surface before applying bonding agent.",
         image: processImg27,
       },
       {
         title: "Apply Even Coat",
         description:
-          "Use brush or roller on surface",
+          "Use brush or roller on surface.",
         image: processImg28,
       },
       {
@@ -283,14 +310,17 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/grout-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/grout-safety-sheet.pdf",
+      technicalDatasheet: BondingAgentBrochure,
+      safetySheet: BondingAgentBrochure,
     },
   },
+
+  // =====================================================
+  // HACKING AGENT
+  // =====================================================
+
   hackingAgent: {
-    title: " APPLICATION PROCESS",
+    title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
 
     steps: [
@@ -303,17 +333,17 @@ const applicationProcessData = {
       {
         title: "Moisten The Surface",
         description:
-          "Ensure the surface is damp before applying the layer to improve adhesion",
+          "Ensure the surface is damp before applying the layer to improve adhesion.",
         image: processImg30,
       },
       {
-        title: "Apply a Coat ",
+        title: "Apply a Coat",
         description:
-          "Spread an even layer of hackoplast  on the prepared surface .",
+          "Spread an even layer of hackoplast on the prepared surface.",
         image: processImg31,
       },
       {
-        title: " Apply Dash-Coat",
+        title: "Apply Dash-Coat",
         description:
           "Once the surface feels tacky, apply a thin coat of cement mortar within 10 minutes for optimal adhesion.",
         image: processImg32,
@@ -333,13 +363,29 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/grout-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/grout-safety-sheet.pdf",
+      technicalDatasheet: HackingAgentBrochure,
+      safetySheet: HackingAgentBrochure,
+    },
+  },
+
+  // =====================================================
+  // STUCCO PLASTER
+  // =====================================================
+
+  stuccoPlaster: {
+    title: "APPLICATION PROCESS",
+    subtitle: "(HOW TO USE)",
+
+    steps: [],
+
+    documentation: {
+      technicalDatasheet: StuccoPlaster,
+      safetySheet: StuccoPlaster,
     },
   },
 };
+
+// ================= COMPONENT =================
 
 const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
   product,
@@ -348,6 +394,8 @@ const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
 
   return (
     <>
+      {/* ================= APPLICATION PROCESS ================= */}
+
       <section className="application-section">
         <div className="application-header">
           <h2>{data.title}</h2>
@@ -385,12 +433,15 @@ const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
         </div>
       </section>
 
+      {/* ================= PRODUCT DOCUMENTATION ================= */}
+
       <section className="documentation-section">
         <ProductDocumentation
           technicalDatasheet={data.documentation.technicalDatasheet}
           safetySheet={data.documentation.safetySheet}
+          technicalLabel="Product Brochure"
+          safetyLabel="Product Brochure"
         />
-
       </section>
     </>
   );

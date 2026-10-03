@@ -2,18 +2,18 @@ import React from "react";
 import "./Careers.css";
 
 import CareersBanner from "../../assets/careers-banner.png";
+import CareersForm from "../../components/CareersForm/CareersForm";
 
 const Careers: React.FC = () => {
   return (
-    <main className="careers-page">
+    <><section className="careers-page">
 
       {/* Hero Banner */}
       <section className="careers-hero">
         <img
           src={CareersBanner}
           alt="Careers at A S Building Solutions"
-          className="careers-hero-image"
-        />
+          className="careers-hero-image" />
       </section>
 
       {/* Careers Content */}
@@ -44,9 +44,13 @@ const Careers: React.FC = () => {
 
           </div>
         </div>
-      </section>
 
-    </main>
+      </section>
+    </section><section>
+        <div>
+          <CareersForm />
+        </div>
+      </section></>
   );
 };
 

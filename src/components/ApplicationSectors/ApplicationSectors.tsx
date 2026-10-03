@@ -36,17 +36,7 @@ const sectors: Sector[] = [
         id: 4,
         title: "CONCRETE REPAIR",
         image: application4,
-    },
-    {
-        id: 5,
-        title: "WATERPROOFING",
-        image: application5,
-    },
-    {
-        id: 6,
-        title: "WATERPROOFING",
-        image: application6,
-    },
+    }
 ];
 
 const ApplicationSectors: React.FC = () => {

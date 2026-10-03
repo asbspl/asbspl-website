@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./QuoteSection.css";
 import QuoteSectionimg from "../../assets/QuoteSection-img.png"
+import { Link } from "react-router-dom";
 
 interface QuoteFormData {
   name: string;
@@ -203,9 +204,9 @@ const QuoteSection = () => {
 
       <div className="col-12 col-lg-2">
         <div className="cta-button-wrapper">
-          <button type="button" className="cta-button">
-            DISCOVER MORE
-          </button>
+<Link to="/about" className="cta-button">
+  DISCOVER MORE
+</Link>
         </div>
       </div>
 
