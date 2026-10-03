@@ -1,75 +1,70 @@
-# React + TypeScript + Vite
+# Rockstar — Construction Materials Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rockstar is a modern construction materials website for **A S Building Solutions Pvt Ltd**, built using **React, TypeScript, Vite, Bootstrap 5.3, and CSS**.
 
-Currently, two official plugins are available:
+The website presents Rockstar's construction-material solutions, company information, product-focused content, and a contact form that can send enquiries through the **Web3Forms** email service.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About Rockstar
 
-## React Compiler
+Rockstar is a leading construction materials brand by **A S Building Solutions Pvt Ltd**, focused on delivering high-performance dry-mix solutions for modern construction.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Our products are designed to enhance strength, durability, and efficiency across a wide range of building applications.
 
-## Expanding the ESLint configuration
+With a strong commitment to quality and innovation, Rockstar helps builders, engineers, and contractors achieve reliable and long-lasting results on every project.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technology Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** — Frontend UI library
+- **TypeScript** — Type-safe JavaScript
+- **Vite** — Development server and build tool
+- **Bootstrap 5.3** — Responsive UI framework
+- **CSS** — Custom website styling
+- **Web3Forms** — Contact form to email service
+- **ESLint** — Code quality and linting
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Responsive construction-materials website
+- React + TypeScript architecture
+- Bootstrap 5.3 responsive layout
+- Custom CSS styling
+- Rockstar company/about section
+- Construction-material focused content
+- Contact/enquiry form
+- Web3Forms email integration
+- Vite Hot Module Replacement (HMR)
+- ESLint configuration
+- Mobile, tablet, and desktop friendly design
 
-```
+## Project Structure
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+asbspl-website/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   │   ├── About/
+│   │   ├── BJM/
+│   │   ├── BondingAgent/
+│   │   ├── Careers/
+│   │   ├── Contact/
+│   │   ├── Downloads/
+│   │   ├── HackingAgent/
+│   │   ├── Home/
+│   │   ├── PREMIXPlaster/
+│   │   ├── Rewards/
+│   │   ├── Solutions/
+│   │   └── TileAdhesive/
+│   ├── routes/
+│   │   └── AppRoutes.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+└── package.json

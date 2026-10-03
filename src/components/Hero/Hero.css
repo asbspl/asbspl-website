@@ -163,6 +163,10 @@
     font-weight: 500;
     border-radius: 6px;
 }
+.hero-button a{
+        color: white;
+    text-decoration: none;
+}
 
 /* =========================================
    AI CHATBOT
@@ -276,8 +280,8 @@
 
 @media (max-width: 575.98px) {
     .hero-section {
-
-        align-items: flex-end;
+        display: flex;
+        align-items: center;
 
         background-position: 65% center;
     }

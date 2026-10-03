@@ -21,8 +21,10 @@
 }
 
 .logo-image {
-  height: auto;
-  object-fit: contain;
+    height: auto;
+    object-fit: contain;
+    width: 300px;
+    padding: 16px 0px;
 }
 
 /* Navigation */
@@ -53,11 +55,10 @@
 }
 
 /* Active Navigation */
-.header-nav .nav-link.active,
-.header-nav .nav-link[aria-current="page"],
-.product-dropdown-btn.active {
-  color: #000 !important;
-  font-weight: 600;
+.header-nav .nav-link.active, .header-nav .nav-link[aria-current="page"], .product-dropdown-btn.active {
+    color: #f5b72c !important;
+    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Dropdown */

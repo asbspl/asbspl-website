@@ -21,6 +21,32 @@ import processImg15 from "../../assets/processImg15.png";
 import processImg16 from "../../assets/processImg16.png";
 import processImg17 from "../../assets/processImg17.png";
 import processImg18 from "../../assets/processImg18.png";
+import processImg20 from "../../assets/processImg20.png";
+import processImg21 from "../../assets/processImg21.png";
+import processImg22 from "../../assets/processImg22.png";
+import processImg23 from "../../assets/processImg23.png";
+import processImg24 from "../../assets/processImg24.png";
+import processImg25 from "../../assets/processImg25.png";
+import processImg26 from "../../assets/processImg26.png";
+import processImg27 from "../../assets/processImg27.png";
+import processImg28 from "../../assets/processImg28.png";
+import processImg29 from "../../assets/processImg29.png";
+import processImg30 from "../../assets/processImg30.png";
+import processImg31 from "../../assets/processImg31.png";
+import processImg32 from "../../assets/processImg32.png";
+import processImg33 from "../../assets/processImg33.png";
+import processImg34 from "../../assets/processImg34.png";
+
+// ================= PDF BROCHURES =================
+
+import BJMBrochure from "../../assets/rockstar product brochure_BJM.pdf";
+import PremixBrochure from "../../assets/rockstar product brochure_primix_plaster.pdf";
+import BondingAgentBrochure from "../../assets/rockstar product brochure_BONDING_AGENT.pdf";
+import HackingAgentBrochure from "../../assets/rockstar product brochure_HACKOPLAST.pdf";
+import TileAdhesiveBrochure from "../../assets/rockstar product brochure_tile_adesive.pdf";
+import StuccoPlaster from "../../assets/rockstar product brochure_STUCCO_PLASTER.pdf";
+
+// ================= TYPES =================
 
 interface ProcessStep {
   title: string;
@@ -29,10 +55,22 @@ interface ProcessStep {
 }
 
 interface ApplicationProcessProps {
-  product: "tileAdhesive" | "bjm" | "grout";
+  product:
+    | "tileAdhesive"
+    | "bjm"
+    | "premixplasters"
+    | "bondingAgent"
+    | "hackingAgent"
+    | "stuccoPlaster";
 }
 
+// ================= DATA =================
+
 const applicationProcessData = {
+  // =====================================================
+  // TILE ADHESIVE
+  // =====================================================
+
   tileAdhesive: {
     title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
@@ -113,15 +151,17 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/technical-datasheet.pdf",
-      safetySheet:
-        "/documents/safety-sheet.pdf",
+      technicalDatasheet: TileAdhesiveBrochure,
+      safetySheet: TileAdhesiveBrochure,
     },
   },
 
+  // =====================================================
+  // BJM
+  // =====================================================
+
   bjm: {
-    title: " APPLICATION PROCESS",
+    title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
 
     steps: [
@@ -138,7 +178,7 @@ const applicationProcessData = {
         image: processImg14,
       },
       {
-        title: " Mechanical Mixing ",
+        title: "Mechanical Mixing",
         description:
           "Stir with an electric mixer until lump-free.",
         image: processImg15,
@@ -149,13 +189,13 @@ const applicationProcessData = {
           "Use a trowel to apply 2–3 mm thick mortar evenly on the block surface.",
         image: processImg16,
       },
-            {
+      {
         title: "Gentle Tapping",
         description:
           "Tap lightly using a rubber mallet to set the block firmly.",
         image: processImg17,
       },
-            {
+      {
         title: "Curing Period",
         description:
           "Leave undisturbed for 24 hours to set.",
@@ -164,46 +204,188 @@ const applicationProcessData = {
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/waterproofing-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/waterproofing-safety-sheet.pdf",
+      technicalDatasheet: BJMBrochure,
+      safetySheet: BJMBrochure,
     },
   },
 
-  grout: {
+  // =====================================================
+  // PREMIX PLASTERS
+  // =====================================================
+
+  premixplasters: {
     title: "GROUT APPLICATION",
     subtitle: "(HOW TO USE)",
 
     steps: [
       {
-        title: "Clean Joints",
+        title: "Surface Cleaning",
         description:
-          "Remove dust and debris from the tile joints.",
-        image: processImg1,
+          "Remove dust and loose particles. Ensure blocks are even and properly aligned.",
+        image: processImg23,
       },
       {
-        title: "Prepare Grout",
+        title: "Mixing with Water",
         description:
-          "Mix the grout according to the recommended ratio.",
-        image: processImg2,
+          "Mix premix plaster with clean water to achieve a smooth, lump-free consistency.",
+        image: processImg22,
       },
       {
-        title: "Apply Grout",
+        title: "Mechanical Mixing",
         description:
-          "Press grout firmly into all tile joints.",
-        image: processImg3,
+          "Stir with an electric mixer until lump-free.",
+        image: processImg15,
+      },
+      {
+        title: "Application",
+        description:
+          "Apply plaster evenly on the wall using a trowel. Maintain uniform thickness.",
+        image: processImg16,
+      },
+      {
+        title: "Leveling",
+        description:
+          "Level the surface using a straight edge for a smooth and even finish.",
+        image: processImg20,
+      },
+      {
+        title: "Water Curing",
+        description:
+          "Cure the plaster by sprinkling water for 2–3 days.",
+        image: processImg21,
       },
     ],
 
     documentation: {
-      technicalDatasheet:
-        "/documents/grout-technical-datasheet.pdf",
-      safetySheet:
-        "/documents/grout-safety-sheet.pdf",
+      technicalDatasheet: PremixBrochure,
+      safetySheet: PremixBrochure,
+    },
+  },
+
+  // =====================================================
+  // BONDING AGENT
+  // =====================================================
+
+  bondingAgent: {
+    title: "APPLICATION PROCESS",
+    subtitle: "(HOW TO USE)",
+
+    steps: [
+      {
+        title: "Surface Cleaning",
+        description:
+          "Remove dust and loose particles. Ensure blocks are even and properly aligned.",
+        image: processImg24,
+      },
+      {
+        title: "Stir Thoroughly",
+        description:
+          "Mix bonding agent well before use.",
+        image: processImg25,
+      },
+      {
+        title: "Use Proper Tools",
+        description:
+          "Apply using a good quality brush or roller for uniform coating.",
+        image: processImg26,
+      },
+      {
+        title: "Dampen Surface",
+        description:
+          "Lightly moisten the surface before applying bonding agent.",
+        image: processImg27,
+      },
+      {
+        title: "Apply Even Coat",
+        description:
+          "Use brush or roller on surface.",
+        image: processImg28,
+      },
+      {
+        title: "Curing Period",
+        description:
+          "Leave undisturbed for 24 hours to set.",
+        image: processImg11,
+      },
+    ],
+
+    documentation: {
+      technicalDatasheet: BondingAgentBrochure,
+      safetySheet: BondingAgentBrochure,
+    },
+  },
+
+  // =====================================================
+  // HACKING AGENT
+  // =====================================================
+
+  hackingAgent: {
+    title: "APPLICATION PROCESS",
+    subtitle: "(HOW TO USE)",
+
+    steps: [
+      {
+        title: "Clean the Surface",
+        description:
+          "Remove all dust, dirt, and loose material to create a proper base for application.",
+        image: processImg29,
+      },
+      {
+        title: "Moisten The Surface",
+        description:
+          "Ensure the surface is damp before applying the layer to improve adhesion.",
+        image: processImg30,
+      },
+      {
+        title: "Apply a Coat",
+        description:
+          "Spread an even layer of hackoplast on the prepared surface.",
+        image: processImg31,
+      },
+      {
+        title: "Apply Dash-Coat",
+        description:
+          "Once the surface feels tacky, apply a thin coat of cement mortar within 10 minutes for optimal adhesion.",
+        image: processImg32,
+      },
+      {
+        title: "Ensure Tacky Surface",
+        description:
+          "Verify that the surface is sticky before applying plaster layer to achieve proper bonding.",
+        image: processImg33,
+      },
+      {
+        title: "Plaster the Surface",
+        description:
+          "Once the dash/coat has set, apply plaster evenly for a smooth and durable finish.",
+        image: processImg34,
+      },
+    ],
+
+    documentation: {
+      technicalDatasheet: HackingAgentBrochure,
+      safetySheet: HackingAgentBrochure,
+    },
+  },
+
+  // =====================================================
+  // STUCCO PLASTER
+  // =====================================================
+
+  stuccoPlaster: {
+    title: "APPLICATION PROCESS",
+    subtitle: "(HOW TO USE)",
+
+    steps: [],
+
+    documentation: {
+      technicalDatasheet: StuccoPlaster,
+      safetySheet: StuccoPlaster,
     },
   },
 };
+
+// ================= COMPONENT =================
 
 const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
   product,
@@ -212,6 +394,8 @@ const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
 
   return (
     <>
+      {/* ================= APPLICATION PROCESS ================= */}
+
       <section className="application-section">
         <div className="application-header">
           <h2>{data.title}</h2>
@@ -249,12 +433,15 @@ const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
         </div>
       </section>
 
-      <section className="documentation-section">
-<ProductDocumentation
-  technicalDatasheet={data.documentation.technicalDatasheet}
-  safetySheet={data.documentation.safetySheet}
-/>
+      {/* ================= PRODUCT DOCUMENTATION ================= */}
 
+      <section className="documentation-section">
+        <ProductDocumentation
+          technicalDatasheet={data.documentation.technicalDatasheet}
+          safetySheet={data.documentation.safetySheet}
+          technicalLabel="Product Brochure"
+          safetyLabel="Product Brochure"
+        />
       </section>
     </>
   );

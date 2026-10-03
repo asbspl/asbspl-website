@@ -7,6 +7,21 @@ import KeyBenefit4 from "../../assets/key-benefits4.png";
 import KeyBenefit5 from "../../assets/key-benefits5.png";
 import KeyBenefit6 from "../../assets/faster-construction.png"
 import KeyBenefit7 from "../../assets/thin-joint.png"
+import KeyBenefit8 from "../../assets/smooth-finish.png"
+import KeyBenefit9 from "../../assets/key-benefits9.png"
+import KeyBenefit10 from "../../assets/key-benefits10.png"
+import KeyBenefit11 from "../../assets/key-benefits11.png"
+import KeyBenefit12 from "../../assets/key-benefits12.png"
+import KeyBenefit13 from "../../assets/key-benefits13.png"
+import KeyBenefit14 from "../../assets/key-benefits14.png"
+import KeyBenefit15 from "../../assets/key-benefits15.png"
+import KeyBenefit16 from "../../assets/key-benefits16.png"
+import KeyBenefit17 from "../../assets/key-benefits17.png"
+import KeyBenefit18 from "../../assets/key-benefits18.png"
+
+
+
+
 
 
 const KeyBenefits = ({ product }) => {
@@ -58,72 +73,72 @@ const KeyBenefits = ({ product }) => {
       },
     ],
 
-    tileGrout: [
+    PREMIXPlaster: [
       {
         image: KeyBenefit1,
-        title: "Water Resistant",
+        title: "Strong Bond",
       },
       {
         image: KeyBenefit2,
-        title: "Stain Resistant",
+        title: "Crack Resistant  ",
       },
       {
-        image: KeyBenefit3,
-        title: "Easy Mixing",
+        image: KeyBenefit8,
+        title: "Smooth Finish",
       },
       {
         image: KeyBenefit4,
-        title: "Quick Application",
+        title: " Time Saving  ",
       },
       {
         image: KeyBenefit5,
-        title: "Durable Finish",
+        title: " Cost Effective  ",
       },
     ],
 
-    waterproofing: [
+    bondingAgent: [
       {
-        image: KeyBenefit1,
-        title: "Excellent Waterproofing",
+        image: KeyBenefit9,
+        title: "Superior RCC Surface Bonding",
       },
       {
-        image: KeyBenefit2,
-        title: "Crack Resistant",
+        image: KeyBenefit10,
+        title: "Single Coat Application",
       },
       {
-        image: KeyBenefit3,
-        title: "Easy Application",
+        image: KeyBenefit11,
+        title: "Faster Application",
       },
       {
-        image: KeyBenefit4,
-        title: "Long Lasting",
+        image: KeyBenefit12,
+        title: "High Strength & Water Retention",
       },
       {
-        image: KeyBenefit5,
-        title: "Cost Effective",
+        image: KeyBenefit13,
+        title: "Better Bond Strength ",
       },
     ],
 
-    repairMortar: [
+    hackingAgent: [
       {
-        image: KeyBenefit1,
-        title: "High Strength",
+        image: KeyBenefit14,
+        title: "Superior Grip ",
       },
       {
-        image: KeyBenefit2,
-        title: "Shrinkage Resistant",
+        image: KeyBenefit15,
+        title: "Self Curing",
       },
       {
-        image: KeyBenefit3,
-        title: "Easy Application",
+        image: KeyBenefit16,
+        title: "Improves Plaster Quality",
       },
       {
-        image: KeyBenefit4,
-        title: "Fast Setting",
+        image: KeyBenefit17,
+        title: "Prevents Cracks",
       },
       {
-        image: KeyBenefit5,
-        title: "Durable",
+        image: KeyBenefit18,
+        title: " Cost Effective",
       },
     ],
   };

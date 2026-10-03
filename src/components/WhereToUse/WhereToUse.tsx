@@ -6,10 +6,20 @@ import bathroomwallfloor from "../../assets/WhereToUse2.png";
 import balconyoutdoorarea from "../../assets/WhereToUse3.png";
 import commercialinterior from "../../assets/WhereToUse4.png";
 
-import largetiles from "../../assets/large-tiles.png";
-import outdoorspace from "../../assets/outdoor-space.png";
-import hightrafficarea from "../../assets/high-traffic-area.png";
-import naturalstone from "../../assets/natural-stone.png";
+import WhereToUse9 from "../../assets/WhereToUse9.png";
+import WhereToUse10 from "../../assets/WhereToUse10.png";
+import WhereToUse11 from "../../assets/WhereToUse11.png";
+import WhereToUse12 from "../../assets/WhereToUse12.png";
+
+import exteriorwalls from "../../assets/exterior-walls.png";
+import interiorwalls from "../../assets/interior-walls.png";
+import aacblock from "../../assets/aac-block.png";
+import largewall from "../../assets/large-wall.png";
+
+import WhereToUse5 from "../../assets/WhereToUse5.png";
+import WhereToUse6 from "../../assets/WhereToUse6.png";
+import WhereToUse7 from "../../assets/WhereToUse7.png";
+import WhereToUse8 from "../../assets/WhereToUse8.png";
 
 
 /* =========================================================
@@ -24,7 +34,8 @@ interface WhereToUseItem {
 type WhereToUseProduct =
   | "bjm"
   | "premixPlaster"
-  | "bondingAgent";
+  | "bondingAgent"
+  | "hackingAgent";
 
 
 
@@ -72,20 +83,20 @@ const whereToUseData: Record<
 
   premixPlaster: [
     {
-      title: "Residential Flooring",
-      image: residentialflooring,
+      title: "Exterior Walls",
+      image: exteriorwalls,
     },
     {
-      title: "Bathroom Wall & Floor",
-      image: bathroomwallfloor,
+      title: "Interior Walls ",
+      image: interiorwalls,
     },
     {
-      title: "Balcony / Outdoor Area",
-      image: balconyoutdoorarea,
+      title: "AAC BLOCK WALL",
+      image: aacblock,
     },
     {
-      title: "Commercial Interior",
-      image: commercialinterior,
+      title: "LARGE SCALE WALL",
+      image: largewall,
     },
   ],
 
@@ -96,22 +107,42 @@ const whereToUseData: Record<
 
   bondingAgent: [
     {
-      title: "Large Format Tiles",
-      image: largetiles,
+      title: "RCC Walls & Ceilings",
+      image: WhereToUse5,
     },
     {
-      title: "Natural Stone Application",
-      image: naturalstone,
+      title: "Old Surface Renovation",
+      image: WhereToUse6,
     },
     {
-      title: "High Traffic Commercial Area",
-      image: hightrafficarea,
+      title: "Gypsum Plaster Base",
+      image: WhereToUse7,
     },
     {
-      title: "Indoor + Outdoor Space",
-      image: outdoorspace,
+      title: "Column & Beam Surfaces",
+      image: WhereToUse8,
     },
   ],
+  
+    hackingAgent: [
+    {
+      title: "RCC Concrete Surfaces",
+      image: WhereToUse9,
+    },
+    {
+      title: "Block Masonry Wall",
+      image: WhereToUse10,
+    },
+    {
+      title: "Interior Wall",
+      image: WhereToUse11,
+    },
+    {
+      title: "Exterior Wall",
+      image: WhereToUse12,
+    },
+  ],
+  
 };
 
 

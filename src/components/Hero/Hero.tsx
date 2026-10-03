@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { FaPhoneAlt } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -44,7 +44,9 @@ const Hero = () => {
                 href="#products"
                 
               ><button className="hero-button">
-                View Products
+                <Link to="/products/TileAdhesive">
+  View Products
+</Link>
                 </button>
               </a>
 

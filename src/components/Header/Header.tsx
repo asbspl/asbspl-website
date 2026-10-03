@@ -166,7 +166,7 @@ const Header = () => {
               </li>
 
               {/* Rewards */}
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   to="/rewards"
                   className={`nav-link ${
@@ -176,7 +176,7 @@ const Header = () => {
                 >
                   Rewards
                 </Link>
-              </li>
+              </li> */}
 
               {/* Careers */}
               <li className="nav-item">
