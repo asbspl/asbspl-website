@@ -6,7 +6,6 @@ import application2 from "../../assets/application-img4.png";
 import application3 from "../../assets/application-img5.png";
 import application4 from "../../assets/application-img1.png";
 import application5 from "../../assets/application-img2.png";
-import application6 from "../../assets/application-img3.png";
 import allproductimg from "../../assets/allproduct-img.png"
 
 
@@ -24,7 +23,7 @@ const sectors: Sector[] = [
     },
     {
         id: 2,
-        title: "WALL PREPARATION",
+        title: "Surface Preparation",
         image: application2,
     },
     {
@@ -34,8 +33,13 @@ const sectors: Sector[] = [
     },
     {
         id: 4,
-        title: "CONCRETE REPAIR",
+        title: "WALL PREPARATION",
         image: application4,
+    },
+    {
+        id: 5,
+        title: "Bonding Agents",
+        image: application5,
     }
 ];
 

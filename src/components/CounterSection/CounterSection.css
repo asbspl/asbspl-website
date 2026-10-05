@@ -279,3 +279,11 @@
 .counter-card:hover .counter-glow {
   transform: scale(1.5);
 }
+
+
+@media (max-width: 575.98px) {
+
+  .counter-number {
+    font-size: 32px;
+  }
+}

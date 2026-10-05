@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 
 import "./Contact.css";
@@ -132,8 +133,8 @@ const Contact = () => {
 
                   <h6>Phone</h6>
 
-                  <a href="tel:+912065236359">
-                    020 65236359
+                  <a href="tel:+918526872687">
+                    +91-852-687-2687
                   </a>
 
                 </div>
@@ -153,8 +154,8 @@ const Contact = () => {
 
                   <h6>Email</h6>
 
-                  <a href="mailto:tech@asbspl.com">
-                    tech@asbspl.com
+                  <a href="mailto:contact@asbspl.com">
+                    contact@asbspl.com
                   </a>
 
                 </div>
@@ -192,15 +193,16 @@ const Contact = () => {
 
               <div className="contact-socials">
 
-                <a
-                  className="facebook"
-                  href="#"
-                  aria-label="Facebook"
+                <a target="_blank"
+                  className="youtube"
+                  href="https://www.youtube.com/@Rockstar-x5u2c"
+                  aria-label="youtube"
                 >
-                  <FaFacebookF />
+                  <FaYoutube />
                 </a>
 
                 <a
+                target="_blank"
                   className="twitter"
                   href="#"
                   aria-label="Twitter"
@@ -209,16 +211,18 @@ const Contact = () => {
                 </a>
 
                 <a
+                target="_blank"
                   className="linkedIn"
-                  href="#"
+                  href="https://in.linkedin.com/company/as-building-solutions-pvt-ltd"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedinIn />
                 </a>
 
                 <a
+                target="_blank"
                   className="instagram"
-                  href="#"
+                  href="https://www.instagram.com/rockstar_asbspl/"
                   aria-label="Instagram"
                 >
                   <FaInstagram />

@@ -67,7 +67,7 @@
 .rockstar-logo {
   position: absolute;
   top: 50%;
-  left: 12%;
+  left: 22%;
   transform: translateY(-50%);
 
   color: #2859a5;
@@ -222,6 +222,7 @@
 
   .rockstar-logo {
     font-size: 50px;
+    left: 18%;
   }
 
   .about-content {
