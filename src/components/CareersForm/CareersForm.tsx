@@ -1,8 +1,129 @@
 import { type FormEvent, useState } from "react";
 import "./CareersForm.css";
 
+interface JobOpening {
+  id: number;
+  title: string;
+  location: string;
+  type: string;
+  skills: string[];
+  qualifications: string[];
+}
+
+/*
+|--------------------------------------------------------------------------
+| JOB OPENINGS
+|--------------------------------------------------------------------------
+| Manage your career openings from here.
+|
+| ADD:
+| Add a new object.
+|
+| EDIT:
+| Change the existing object.
+|
+| DELETE:
+| Remove the object completely.
+|
+| These controls are ONLY in the code.
+| Website users will NOT see Add / Edit / Delete buttons.
+|--------------------------------------------------------------------------
+*/
+
+const jobOpenings: JobOpening[] = [
+  // {
+  //   id: 1,
+
+  //   title: "HR Intern",
+
+  //   location: "Pune, India",
+
+  //   type: "Full-Time",
+
+  //   skills: [
+  //     "Good communication",
+  //     "Basic HR knowledge",
+  //     "Team coordination",
+  //   ],
+
+  //   qualifications: [
+  //     "B.B.A. / B.Com / MBA HR",
+  //     "Good interpersonal skills",
+  //     "Basic knowledge of HR activities",
+  //   ],
+  // },
+
+  // {
+  //   id: 2,
+
+  //   title: "Business Development Executive",
+
+  //   location: "Pune, India",
+
+  //   type: "Full-Time",
+
+  //   skills: [
+  //     "Good communication",
+  //     "Lead generation",
+  //     "Client relationship management",
+  //   ],
+
+  //   qualifications: [
+  //     "Bachelor's degree in any discipline",
+  //     "Good communication skills",
+  //     "Sales / Business Development knowledge",
+  //   ],
+  // }
+
+
+  
+];
+
 const Careers = () => {
-  const [isSending, setIsSending] = useState(false);
+  /*
+  |--------------------------------------------------------------------------
+  | EXPANDED JOB
+  |--------------------------------------------------------------------------
+  */
+
+  const [expandedJob, setExpandedJob] = useState<number | null>(
+    jobOpenings.length > 0
+      ? jobOpenings[0].id
+      : null
+  );
+
+  /*
+  |--------------------------------------------------------------------------
+  | SELECTED POSITION
+  |--------------------------------------------------------------------------
+  */
+
+  const [selectedPosition, setSelectedPosition] =
+    useState("");
+
+  /*
+  |--------------------------------------------------------------------------
+  | SHOW APPLICATION FORM
+  |--------------------------------------------------------------------------
+  */
+
+  const [showApplicationForm, setShowApplicationForm] =
+    useState(false);
+
+  /*
+  |--------------------------------------------------------------------------
+  | FORM SENDING
+  |--------------------------------------------------------------------------
+  */
+
+  const [isSending, setIsSending] =
+    useState(false);
+
+  /*
+  |--------------------------------------------------------------------------
+  | STATUS
+  |--------------------------------------------------------------------------
+  */
 
   const [status, setStatus] = useState<{
     type: "success" | "error" | "";
@@ -12,253 +133,743 @@ const Careers = () => {
     message: "",
   });
 
-const handleSubmit = async (
-  event: FormEvent<HTMLFormElement>
-) => {
-  event.preventDefault();
+  /*
+  |--------------------------------------------------------------------------
+  | APPLY FOR POSITION
+  |--------------------------------------------------------------------------
+  */
 
-  setIsSending(true);
+  const handleApply = (job: JobOpening) => {
+    /*
+    * Select only this position
+    */
+    setSelectedPosition(job.title);
 
-  setStatus({
-    type: "",
-    message: "",
-  });
+    /*
+    * Show application form
+    */
+    setShowApplicationForm(true);
 
-  const form = event.currentTarget;
-  const formData = new FormData(form);
+    /*
+    * Expand selected job
+    */
+    setExpandedJob(job.id);
 
-  const accessKey =
-    "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4";
+    /*
+    * Scroll to application form
+    */
+    setTimeout(() => {
+      document
+        .getElementById("career-application-form")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    }, 100);
+  };
 
-  // Get selected job position
-  const selectedPositions = formData.getAll("position");
+  /*
+  |--------------------------------------------------------------------------
+  | CHANGE POSITION
+  |--------------------------------------------------------------------------
+  */
 
-  // Position is required
-  if (selectedPositions.length === 0) {
+  const handleChangePosition = () => {
+    setSelectedPosition("");
+
+    setShowApplicationForm(false);
+
     setStatus({
-      type: "error",
-      message: "Please select at least one job position.",
+      type: "",
+      message: "",
     });
 
-    setIsSending(false);
-    return;
-  }
+    /*
+    * Scroll back to job openings
+    */
+    setTimeout(() => {
+      document
+        .getElementById("career-openings")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    }, 100);
+  };
 
-  // Convert selected positions to text
-  const positionsText = selectedPositions.join(", ");
+  /*
+  |--------------------------------------------------------------------------
+  | FORM SUBMIT
+  |--------------------------------------------------------------------------
+  */
 
-  // Web3Forms access key
-  formData.append("access_key", accessKey);
+  const handleSubmit = async (
+    event: FormEvent<HTMLFormElement>
+  ) => {
+    event.preventDefault();
 
-  // Dynamic email subject
-  formData.append(
-    "subject",
-    `New Career Application - ${positionsText}`
-  );
+    /*
+    * Reset status
+    */
+    setStatus({
+      type: "",
+      message: "",
+    });
 
-  // Sender name
-  formData.append(
-    "from_name",
-    "Rockstar Careers"
-  );
-
-  // Position inside email body
-  formData.append(
-    "selected_position",
-    positionsText
-  );
-
-  try {
-    const response = await fetch(
-      "https://api.web3forms.com/submit",
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-
-    const result = await response.json();
-
-    if (result.success) {
-      setStatus({
-        type: "success",
-        message:
-          "Thank you! Your application has been submitted successfully.",
-      });
-
-      form.reset();
-    } else {
+    /*
+    * Position validation
+    */
+    if (!selectedPosition) {
       setStatus({
         type: "error",
+
         message:
-          result.message ||
-          "Something went wrong. Please try again.",
+          "Please select a job position before applying.",
       });
+
+      return;
     }
-  } catch (error) {
-    console.error(
-      "Web3Forms career submission error:",
-      error
+
+    setIsSending(true);
+
+    const form = event.currentTarget;
+
+    const formData = new FormData(form);
+
+    /*
+    |--------------------------------------------------------------------------
+    | WEB3FORMS ACCESS KEY
+    |--------------------------------------------------------------------------
+    */
+
+    const accessKey =
+      "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4";
+
+    /*
+    |--------------------------------------------------------------------------
+    | WEB3FORMS DATA
+    |--------------------------------------------------------------------------
+    */
+
+    formData.append(
+      "access_key",
+      accessKey
     );
 
-    setStatus({
-      type: "error",
-      message:
-        "Unable to submit your application. Please try again later.",
-    });
-  } finally {
-    setIsSending(false);
-  }
-};
+    /*
+    * Dynamic email subject
+    */
+
+    formData.append(
+      "subject",
+      `New Career Application - ${selectedPosition}`
+    );
+
+    /*
+    * Sender name
+    */
+
+    formData.append(
+      "from_name",
+      "Rockstar Careers"
+    );
+
+    /*
+    * Selected position
+    */
+
+    formData.append(
+      "selected_position",
+      selectedPosition
+    );
+
+    try {
+      /*
+      |--------------------------------------------------------------------------
+      | SEND TO WEB3FORMS
+      |--------------------------------------------------------------------------
+      */
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+
+          body: formData,
+        }
+      );
+
+      const result = await response.json();
+
+      /*
+      |--------------------------------------------------------------------------
+      | SUCCESS
+      |--------------------------------------------------------------------------
+      */
+
+      if (result.success) {
+        setStatus({
+          type: "success",
+
+          message:
+            "Thank you! Your application has been submitted successfully.",
+        });
+
+        /*
+        * Reset form
+        */
+        form.reset();
+
+        /*
+        * Reset selected position
+        */
+        setSelectedPosition("");
+
+        /*
+        * Hide application form
+        */
+        setShowApplicationForm(false);
+
+        /*
+        * Scroll back to openings
+        */
+        setTimeout(() => {
+          document
+            .getElementById("career-openings")
+            ?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+        }, 500);
+      } else {
+        /*
+        |--------------------------------------------------------------------------
+        | ERROR FROM WEB3FORMS
+        |--------------------------------------------------------------------------
+        */
+
+        setStatus({
+          type: "error",
+
+          message:
+            result.message ||
+            "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      /*
+      |--------------------------------------------------------------------------
+      | NETWORK ERROR
+      |--------------------------------------------------------------------------
+      */
+
+      console.error(
+        "Web3Forms career submission error:",
+        error
+      );
+
+      setStatus({
+        type: "error",
+
+        message:
+          "Unable to submit your application. Please try again later.",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <main className="careers-page">
+
+      {/* =====================================================
+          CAREERS SECTION
+      ====================================================== */}
 
       <section className="careers-section">
 
         <div className="careers-container">
 
-          <div className="careers-card">
+          {/* =================================================
+              PAGE HEADING
+          ================================================== */}
 
-            {/* LEFT SIDE - JOB OPENINGS */}
+          <div className="careers-heading">
 
-            <div className="careers-form">
+            <span className="careers-eyebrow">
+              CAREER OPPORTUNITIES
+            </span>
 
-              <h2>JOBS OPENINGS :</h2>
+            <h1>
+              Join Our <span>Team</span>
+            </h1>
 
-              <div className="job-list">
+            <p>
+              Explore our current job openings and
+              find an opportunity to grow with
+              Rockstar.
+            </p>
 
-                <label className="job-option">
-                  <input
-                    type="radio"
-                    name="position"
-                    value="HR Manager"
-                    form="career-form"
-                  />
-                  <span>HR Manager</span>
-                </label>
+          </div>
 
-                <label className="job-option">
-                  <input
-                    type="radio"
-                    name="position"
-                    value="Sales Executive"
-                    form="career-form"
-                  />
-                  <span>Sales executive</span>
-                </label>
+          {/* =================================================
+              JOB OPENINGS
+          ================================================== */}
 
-                <label className="job-option">
-                  <input
-                    type="radio"
-                    name="position"
-                    value="Business Development Association"
-                    form="career-form"
-                  />
-                  <span>
-                    Business Development Association
-                  </span>
-                </label>
+          <div
+            id="career-openings"
+            className="job-openings"
+          >
 
-                <label className="job-option">
-                  <input
-                    type="radio"
-                    name="position"
-                    value="Senior Team Leading Hosting Product Specialist"
-                    form="career-form"
-                  />
-                  <span>
-                    Senior Team Leading Hosting Product Specialist
-                  </span>
-                </label>
+            {jobOpenings.length > 0 ? (
+
+              jobOpenings.map((job) => {
+
+                const isExpanded =
+                  expandedJob === job.id;
+
+                return (
+                  <div
+                    className={`job-card ${
+                      isExpanded
+                        ? "expanded"
+                        : ""
+                    }`}
+                    key={job.id}
+                  >
+
+                    {/* =======================================
+                        JOB HEADER
+                    ======================================== */}
+
+                    <div className="job-header">
+
+                      <div className="job-main-info">
+
+                        <h2>
+                          {job.title}
+                        </h2>
+
+                        <div className="job-meta">
+
+                          {/* LOCATION */}
+
+                          <span>
+
+                            <span className="job-icon">
+                              ◉
+                            </span>
+
+                            {job.location}
+
+                          </span>
+
+                          <span className="job-divider">
+                            |
+                          </span>
+
+                          {/* JOB TYPE */}
+
+                          <span>
+
+                            <span className="job-icon">
+                              ▣
+                            </span>
+
+                            {job.type}
+
+                          </span>
+
+                        </div>
+
+                      </div>
+
+                      {/* =====================================
+                          ACTIONS
+                      ====================================== */}
+
+                      <div className="job-actions">
+
+                        {/* APPLY */}
+
+                        <button
+                          type="button"
+                          className="apply-btn"
+                          onClick={() =>
+                            handleApply(job)
+                          }
+                        >
+                          Apply
+                        </button>
+
+                        {/* EXPAND */}
+
+                        <button
+                          type="button"
+                          className="expand-btn"
+                          onClick={() =>
+                            setExpandedJob(
+                              isExpanded
+                                ? null
+                                : job.id
+                            )
+                          }
+                          aria-label={
+                            isExpanded
+                              ? "Collapse job details"
+                              : "Expand job details"
+                          }
+                        >
+                          {isExpanded
+                            ? "⌃"
+                            : "⌄"}
+                        </button>
+
+                      </div>
+
+                    </div>
+
+                    {/* =======================================
+                        JOB DETAILS
+                    ======================================== */}
+
+                    {isExpanded && (
+
+                      <div className="job-details">
+
+                        {/* =================================
+                            REQUIRED SKILLS
+                        ================================== */}
+
+                        <div className="job-detail-column">
+
+                          <h3>
+                            REQUIRED SKILLS
+                          </h3>
+
+                          <div className="skills-list">
+
+                            {job.skills.map(
+                              (
+                                skill,
+                                index
+                              ) => (
+
+                                <span
+                                  className="skill-tag"
+                                  key={index}
+                                >
+                                  {skill}
+                                </span>
+
+                              )
+                            )}
+
+                          </div>
+
+                        </div>
+
+                        {/* =================================
+                            QUALIFICATIONS
+                        ================================== */}
+
+                        <div className="job-detail-column">
+
+                          <h3>
+                            KEY QUALIFICATIONS
+                          </h3>
+
+                          <ul>
+
+                            {job.qualifications.map(
+                              (
+                                qualification,
+                                index
+                              ) => (
+
+                                <li
+                                  key={index}
+                                >
+                                  {qualification}
+                                </li>
+
+                              )
+                            )}
+
+                          </ul>
+
+                        </div>
+
+                        {/* =================================
+                            APPLY BUTTON
+                        ================================== */}
+
+                        <div className="job-bottom">
+
+                          <button
+                            type="button"
+                            className="apply-position-btn"
+                            onClick={() =>
+                              handleApply(job)
+                            }
+                          >
+                            Apply for this position
+                          </button>
+
+                        </div>
+
+                      </div>
+
+                    )}
+
+                  </div>
+                );
+              })
+
+            ) : (
+
+              /* =================================================
+                 NO JOB OPENINGS
+              ================================================== */
+
+              <div className="no-openings">
+
+                <div className="no-openings-icon">
+                  ✓
+                </div>
+
+                <h2>
+                  No Current Openings
+                </h2>
+
+                <p>
+                  There are currently no job
+                  openings available.
+                </p>
+
+                <span>
+                  Please check back soon for
+                  new opportunities.
+                </span>
 
               </div>
 
-
-              {/* APPLICATION FORM */}
-
-              <form
-                id="career-form"
-                className="career-form"
-                onSubmit={handleSubmit}
-              >
-
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  autoComplete="name"
-                  required
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  autoComplete="email"
-                  required
-                />
-
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  autoComplete="tel"
-                  required
-                />
-
-                <input
-                  type="text"
-                  name="qualification"
-                  placeholder="qualification"
-                  required
-                />
-
-                {/* Honeypot */}
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  className="career-honeypot"
-                />
-
-                <button
-                  type="submit"
-                  disabled={isSending}
-                >
-                  {isSending ? (
-                    <>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                    </>
-                  )}
-                </button>
-
-              </form>
-
-
-              {/* STATUS */}
-
-              {status.message && (
-                <div
-                  className={`career-status ${status.type}`}
-                  role="alert"
-                >
-                  {status.message}
-                </div>
-              )}
-
-            </div>
-
-
-            {/* RIGHT SIDE - IMAGE */}
-
+            )}
 
           </div>
+
+          {/* =================================================
+              STATUS MESSAGE
+          ================================================== */}
+
+          {status.message && (
+
+            <div
+              className={`career-status ${status.type}`}
+              role="alert"
+            >
+              {status.message}
+            </div>
+
+          )}
+
+          {/* =================================================
+              APPLICATION FORM
+
+              IMPORTANT:
+              This section is ONLY visible after
+              clicking Apply.
+          ================================================== */}
+
+          {jobOpenings.length > 0 &&
+            showApplicationForm && (
+
+              <section
+                id="career-application-form"
+                className="application-section"
+              >
+
+                {/* =========================================
+                    APPLICATION HEADING
+                ========================================== */}
+
+                <div className="application-heading">
+
+                  <span>
+                    CAREER APPLICATION
+                  </span>
+
+                  <h2>
+                    Apply for a Position
+                  </h2>
+
+                  <p>
+                    Fill in your details and our HR
+                    team will get back to you.
+                  </p>
+
+                </div>
+
+                {/* =========================================
+                    SELECTED POSITION
+                ========================================== */}
+
+                <div className="selected-position-box">
+
+                  <div>
+
+                    <span>
+                      Selected Position
+                    </span>
+
+                    <strong>
+                      {selectedPosition}
+                    </strong>
+
+                  </div>
+
+                  <button
+                    type="button"
+                    className="change-position-btn"
+                    onClick={
+                      handleChangePosition
+                    }
+                  >
+                    Change Position
+                  </button>
+
+                </div>
+
+                {/* =========================================
+                    APPLICATION FORM
+                ========================================== */}
+
+                <form
+                  id="career-form"
+                  className="career-form"
+                  onSubmit={handleSubmit}
+                >
+
+                  <div className="form-grid">
+
+                    {/* FULL NAME */}
+
+                    <div className="form-group">
+
+                      <label htmlFor="name">
+                        Full Name
+                      </label>
+
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        autoComplete="name"
+                        required
+                      />
+
+                    </div>
+
+                    {/* EMAIL */}
+
+                    <div className="form-group">
+
+                      <label htmlFor="email">
+                        Email Address
+                      </label>
+
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autoComplete="email"
+                        required
+                      />
+
+                    </div>
+
+                    {/* PHONE */}
+
+                    <div className="form-group">
+
+                      <label htmlFor="phone">
+                        Phone Number
+                      </label>
+
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autoComplete="tel"
+                        required
+                      />
+
+                    </div>
+
+                    {/* QUALIFICATION */}
+
+                    <div className="form-group">
+
+                      <label htmlFor="qualification">
+                        Qualification
+                      </label>
+
+                      <input
+                        id="qualification"
+                        type="text"
+                        name="qualification"
+                        placeholder="Enter your qualification"
+                        required
+                      />
+
+                    </div>
+
+                  </div>
+
+                  {/* =======================================
+                      POSITION
+                  ======================================== */}
+
+                  <input
+                    type="hidden"
+                    name="position"
+                    value={selectedPosition}
+                  />
+
+                  {/* =======================================
+                      HONEYPOT
+                  ======================================== */}
+
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="career-honeypot"
+                  />
+
+                  {/* =======================================
+                      SUBMIT
+                  ======================================== */}
+
+                  <button
+                    type="submit"
+                    className="submit-application-btn"
+                    disabled={isSending}
+                  >
+                    {isSending
+                      ? "Sending..."
+                      : "Send Application"}
+                  </button>
+
+                </form>
+
+              </section>
+
+            )}
 
         </div>
 

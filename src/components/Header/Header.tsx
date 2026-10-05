@@ -20,7 +20,7 @@ const productMenu = [
     label: "Bonding Agent",
     path: "/products/BondingAgent",
   },
-    {
+  {
     label: "Hacking Agent",
     path: "/products/HackingAgent",
   },
@@ -75,9 +75,8 @@ const Header = () => {
           {/* Navigation */}
           <div
             id="mainNavbar"
-            className={`collapse navbar-collapse ${
-              menuOpen ? "show" : ""
-            }`}
+            className={`collapse navbar-collapse ${menuOpen ? "show" : ""
+              }`}
           >
             <ul className="navbar-nav mx-auto header-nav">
 
@@ -85,9 +84,8 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/"
-                  className={`nav-link ${
-                    isActive("/") ? "active" : ""
-                  }`}
+                  className={`nav-link ${isActive("/") ? "active" : ""
+                    }`}
                   onClick={closeMenu}
                 >
                   Home
@@ -98,9 +96,8 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/about"
-                  className={`nav-link ${
-                    isActive("/about") ? "active" : ""
-                  }`}
+                  className={`nav-link ${isActive("/about") ? "active" : ""
+                    }`}
                   onClick={closeMenu}
                 >
                   About
@@ -111,9 +108,8 @@ const Header = () => {
               <li className="nav-item dropdown">
                 <button
                   type="button"
-                  className={`nav-link dropdown-toggle product-dropdown-btn ${
-                    isProductActive ? "active" : ""
-                  }`}
+                  className={`nav-link dropdown-toggle product-dropdown-btn ${isProductActive ? "active" : ""
+                    }`}
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -125,9 +121,8 @@ const Header = () => {
                     <li key={product.path}>
                       <Link
                         to={product.path}
-                        className={`dropdown-item ${
-                          isActive(product.path) ? "active" : ""
-                        }`}
+                        className={`dropdown-item ${isActive(product.path) ? "active" : ""
+                          }`}
                         onClick={closeMenu}
                       >
                         {product.label}
@@ -141,9 +136,8 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/Solutions"
-                  className={`nav-link ${
-                    isActive("/Solutions") ? "active" : ""
-                  }`}
+                  className={`nav-link ${isActive("/Solutions") ? "active" : ""
+                    }`}
                   onClick={closeMenu}
                 >
                   Solutions
@@ -154,11 +148,10 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/Technical-Data-Downloads"
-                  className={`nav-link ${
-                    isActive("/Technical-Data-Downloads")
+                  className={`nav-link ${isActive("/Technical-Data-Downloads")
                       ? "active"
                       : ""
-                  }`}
+                    }`}
                   onClick={closeMenu}
                 >
                   Technical Data / Downloads
@@ -182,9 +175,8 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/Careers"
-                  className={`nav-link ${
-                    isActive("/Careers") ? "active" : ""
-                  }`}
+                  className={`nav-link ${isActive("/Careers") ? "active" : ""
+                    }`}
                   onClick={closeMenu}
                 >
                   Careers
@@ -195,9 +187,8 @@ const Header = () => {
               <li className="nav-item">
                 <Link
                   to="/contact"
-                  className={`nav-link ${
-                    isActive("/contact") ? "active" : ""
-                  }`}
+                  className={`nav-link ${isActive("/contact") ? "active" : ""
+                    }`}
                   onClick={closeMenu}
                 >
                   Contact
@@ -208,10 +199,9 @@ const Header = () => {
             {/* Login */}
             <div className="header-login">
               <Link
-                to="/login"
-                className={`login-btn ${
-                  isActive("/login") ? "active" : ""
-                }`}
+                to="/"
+                className={`login-btn ${isActive("/") ? "active" : ""
+                  }`}
                 onClick={closeMenu}
               >
                 Login
