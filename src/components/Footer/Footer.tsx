@@ -62,13 +62,13 @@ const Footer: React.FC = () => {
 
                         <ul className="footer-links footer-text">
                             <li>
-                                <Link to="/products/paints-primers">Paints &amp; Primers</Link>
+                                <Link to="/products/HackingAgent">Paints &amp; Primers</Link>
                             </li>
                             <li>
-                                <Link to="/products/dry-mix">Dry Mix Products</Link>
+                                <Link to="/products/BJM">Dry Mix Products</Link>
                             </li>
                             <li>
-                                <Link to="/products/plaster-putty-crack-filler">
+                                <Link to="/products/PREMIXPlaster">
                                     Plaster, Putty &amp; Crack Filler
                                 </Link>
                             </li>
@@ -155,24 +155,11 @@ const Footer: React.FC = () => {
                 {/* Bottom Footer */}
                 <div className="footer-bottom">
                     <div className="row align-items-center gy-3">
-                        <div className="col-md-7">
+                        <div>
                             <p className="footer-text copyright">
                                 © {year} A S Building Solutions Pvt Ltd.{" "}
                                 All Rights Reserved.
                             </p>
-                        </div>
-
-                        <div className="col-md-5">
-                            <div className="footer-bottom-content">
-                                <nav className="footer-bottom-links" aria-label="Legal links">
-                                    <Link to="/privacy-policy">Privacy Policy</Link>
-                                    <Link to="/terms-and-conditions">
-                                        Terms &amp; Conditions
-                                    </Link>
-                                </nav>
-
-
-                            </div>
                         </div>
                     </div>
                 </div>

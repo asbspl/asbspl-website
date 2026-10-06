@@ -717,8 +717,7 @@
 
   .workflow-eyebrow {
     margin-bottom: 8px;
-
-    font-size: 9px;
+    font-size: 12px;
 
     letter-spacing: 1.5px;
   }
@@ -868,7 +867,7 @@
   }
 
   .workflow-benefits li {
-    font-size: 11.5px;
+    font-size: 13.5px;
   }
 
   .check-icon {

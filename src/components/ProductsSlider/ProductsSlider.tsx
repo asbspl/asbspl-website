@@ -54,7 +54,7 @@ const products: Product[] = [
   },
   {
     id: 5,
-    name: "Premix Plaster",
+    name: "Bonding Agent",
     category: "Premix Plaster",
     image: product5,
     alt: "High-Performance Ready Mix Plaster",

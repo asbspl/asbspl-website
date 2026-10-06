@@ -45,7 +45,7 @@
 .header-nav .nav-link:hover,
 .product-dropdown-btn:hover,
 .product-dropdown-btn:focus {
-  color: #000 !important;
+  color: #f5b72c !important;
 }
 
 /* Product Dropdown Button */
@@ -96,6 +96,7 @@
 }
 
 .login-btn {
+  color: #2957a4 !important;
   min-width: 100px;
   padding: 9px 22px;
   font-size: 15px;
@@ -106,7 +107,7 @@
 }
 
 .login-btn.active {
-  color: #000;
+  color: #2957a4;
   font-weight: 700;
 }
 
