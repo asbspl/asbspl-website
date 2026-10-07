@@ -1,7 +1,7 @@
 .product-brochures {
   width: 100%;
   min-height: 500px;
-
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

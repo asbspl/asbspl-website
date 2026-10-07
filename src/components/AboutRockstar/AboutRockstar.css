@@ -10,13 +10,16 @@
 /* =========================================
    Hero Section
 ========================================= */
+
 .about-hero {
   width: 100%;
   background-color: #f5f5f5;
 }
 
 .about-hero-image-wrapper {
+  position: relative;
   width: 100%;
+  height: 520px;
   overflow: hidden;
 }
 
@@ -29,6 +32,61 @@
 }
 
 /* =========================================
+   Hero Gradient Overlay
+========================================= */
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(24, 66, 125, 0.92) 0%,
+    rgba(39, 86, 160, 0.72) 40%,
+    rgba(39, 86, 160, 0.25) 75%,
+    rgba(39, 86, 160, 0.05) 100%
+  );
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+   Hero Text
+========================================= */
+
+.about-hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: #ffffff;
+}
+
+.about-hero-content h1 {
+  margin: 0 0 18px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 1.1;
+
+  color: #ffffff;
+}
+
+.about-hero-content p {
+  max-width: 600px;
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 2vw, 21px);
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================================
    About Rockstar Section
 ========================================= */
 
@@ -37,7 +95,6 @@
 }
 
 .about-rockstar-wrapper {
-
   overflow: hidden;
 }
 
@@ -71,6 +128,7 @@
   transform: translateY(-50%);
 
   color: #2859a5;
+
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(60px, 7vw, 92px);
   font-weight: 700;
@@ -93,16 +151,25 @@
 ========================================= */
 
 .about-content {
-    position: relative;
-    height: 100%;
-    padding: 38px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
-    background: linear-gradient(rgb(39 86 160 / 93%), rgb(39 86 160 / 21%)), url(/src/assets/highlight-img.png);
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  height: 100%;
+  padding: 38px 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      rgb(39 86 160 / 93%),
+      rgb(39 86 160 / 21%)
+    ),
+    url("/src/assets/highlight-img.png");
+
+  background-size: cover;
+  background-position: center;
 }
 
 .about-content h2 {
@@ -112,6 +179,7 @@
   font-size: clamp(30px, 3vw, 42px);
   font-weight: 700;
   line-height: 1.15;
+
   color: #ffffff;
 }
 
@@ -123,6 +191,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.45;
+
   color: rgba(255, 255, 255, 0.96);
 }
 
@@ -140,6 +209,14 @@
 ========================================= */
 
 @media (max-width: 991.98px) {
+
+  .about-hero-image-wrapper {
+    height: 450px;
+  }
+
+  .about-hero-content {
+    padding: 0 40px;
+  }
 
   .about-content-image,
   .about-content-image img,
@@ -163,6 +240,24 @@
 
 @media (max-width: 767.98px) {
 
+  .about-hero-image-wrapper {
+    height: 380px;
+  }
+
+  .about-hero-content {
+    padding: 0 25px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 14px;
+  }
+
+  .about-hero-content p {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
   .about-rockstar-wrapper {
     margin: 0;
@@ -211,6 +306,21 @@
 
 @media (max-width: 575.98px) {
 
+  .about-hero-image-wrapper {
+    height: 320px;
+  }
+
+  .about-hero-content {
+    padding: 0 20px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+  }
 
   .about-content-image {
     min-height: 220px;

@@ -10,26 +10,42 @@ const AboutRockstar: React.FC = () => {
       {/* =========================
           Hero Section
       ========================== */}
-      <section
-        className="about-hero"
-        aria-labelledby="about-hero-title"
-      >
-        <div className="container-fluid p-0">
-          <div className="about-hero-image-wrapper">
-            <img
-              src={AboutHeroImg}
-              alt="Rockstar construction materials manufacturing facility"
-              className="about-hero-image"
-              loading="eager"
-              fetchPriority="high"
-            />
+{/* =========================
+    Hero Section
+========================== */}
+<section
+  className="about-hero"
+  aria-labelledby="about-hero-title"
+>
+  <div className="container-fluid p-0">
+    <div className="about-hero-image-wrapper">
 
-            <h1 id="about-hero-title" className="visually-hidden">
-              About Rockstar
-            </h1>
-          </div>
-        </div>
-      </section>
+      <img
+        src={AboutHeroImg}
+        alt="Rockstar construction materials manufacturing facility"
+        className="about-hero-image"
+        loading="eager"
+        fetchPriority="high"
+      />
+
+      {/* Gradient Overlay */}
+      <div className="about-hero-overlay">
+<div className="about-hero-content">
+  <h1 id="about-hero-title">
+    About Us
+  </h1>
+
+  <p>
+    We are a trusted manufacturer, exporter, and supplier of high-quality
+    construction materials, delivering reliable solutions for modern
+    construction needs.
+  </p>
+</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* =========================
           About Section

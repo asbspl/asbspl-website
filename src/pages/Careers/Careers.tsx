@@ -37,8 +37,8 @@ const Careers: React.FC = () => {
 
             <div className="careers-resume-box">
               <span>Please Send Resume :  </span>{" "}
-              <a href="mailto:contact@asbspl.com">
-                contact@asbspl.com
+              <a href="mailto:Hr@asbspl.com">
+                Hr@asbspl.com
               </a>
             </div>
 

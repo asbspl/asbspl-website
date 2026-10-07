@@ -41,15 +41,9 @@ const Hero = () => {
                <b>We're the best Products provider in India</b> 
               </p>
 
-              <a
-                href="#products"
-                
-              ><button className="hero-button">
-                <Link to="/products/TileAdhesive">
-  View Products
+             <Link to="/products/TileAdhesive" className="hero-button">
+  VIEW PRODUCTS
 </Link>
-                </button>
-              </a>
 
             </div>
           </div>

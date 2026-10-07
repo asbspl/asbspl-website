@@ -136,96 +136,14 @@ const BondingAgentProductSection: React.FC<
       {/* =========================================
           PRODUCT INFORMATION
       ========================================= */}
-
       <div className="bonding-agent-info">
-
         <div className="container">
-
-          <div className="row">
-
-            <div className="col-12">
-
-              <div className="bonding-agent-info-wrapper">
-
-                {/* Coverage */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Coverage:
-                    <strong>
-                      {product.info.coverage}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                {/* Application */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Application:
-                    <strong>
-                      {product.info.application}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                {/* Setting Time */}
-
-                {/* <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Setting Time:
-                    <strong>
-                      {product.info.settingTime}
-                    </strong>
-                  </span>
-
-                </div> */}
-
-
-                {/* Packaging */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Packaging:
-                    <strong>
-                      {product.info.packaging}
-                    </strong>
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
+          <div className="bonding-agent-info-wrapper">
+            <p className="bonding-agent-info-text">
+              Superior Grip. Stronger Bonds. Better Finishes.
+            </p>
           </div>
-
         </div>
-
       </div>
 
     </section>

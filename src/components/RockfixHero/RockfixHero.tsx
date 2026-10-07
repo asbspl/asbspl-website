@@ -3,7 +3,7 @@ import "./RockfixHero.css";
 
 import RockfixHeroimg from "../../assets/product-3.png";
 import RockfixHeroimg2 from "../../assets/product-2.png";
-import RockfixHeroimg3 from "../../assets/product-1.png";
+import RockfixHeroimg3 from "../../assets/t300.png";
 
 
 

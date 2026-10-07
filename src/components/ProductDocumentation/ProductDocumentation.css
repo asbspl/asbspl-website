@@ -16,9 +16,9 @@
 
   margin-top: 70px;
   margin-bottom: 80px;
-
+    justify-content: space-evenly !important;
   padding: 38px 42px;
-
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -21,6 +21,7 @@ import processImg15 from "../../assets/processImg15.png";
 import processImg16 from "../../assets/processImg16.png";
 import processImg17 from "../../assets/processImg17.png";
 import processImg18 from "../../assets/processImg18.png";
+import processImg19 from "../../assets/processImg19img.png";
 import processImg20 from "../../assets/processImg20.png";
 import processImg21 from "../../assets/processImg21.png";
 import processImg22 from "../../assets/processImg22.png";
@@ -214,7 +215,7 @@ const applicationProcessData = {
   // =====================================================
 
   premixplasters: {
-    title: "GROUT APPLICATION",
+    title: "APPLICATION PROCESS",
     subtitle: "(HOW TO USE)",
 
     steps: [
@@ -228,7 +229,7 @@ const applicationProcessData = {
         title: "Mixing with Water",
         description:
           "Mix premix plaster with clean water to achieve a smooth, lump-free consistency.",
-        image: processImg22,
+        image: processImg19,
       },
       {
         title: "Mechanical Mixing",
@@ -240,7 +241,7 @@ const applicationProcessData = {
         title: "Application",
         description:
           "Apply plaster evenly on the wall using a trowel. Maintain uniform thickness.",
-        image: processImg16,
+        image: processImg22,
       },
       {
         title: "Leveling",
@@ -438,9 +439,9 @@ const ApplicationProcess: React.FC<ApplicationProcessProps> = ({
       <section className="documentation-section">
         <ProductDocumentation
           technicalDatasheet={data.documentation.technicalDatasheet}
-          safetySheet={data.documentation.safetySheet}
+          // safetySheet={data.documentation.safetySheet}
           technicalLabel="Product Brochure"
-          safetyLabel="Product Brochure"
+          // safetyLabel="Product Brochure"
         />
       </section>
     </>
