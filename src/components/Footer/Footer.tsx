@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 import footerLogo from "../../assets/footer-logo.png";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 const Footer: React.FC = () => {
     const year = new Date().getFullYear();
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
 
                         <ul className="footer-links footer-text">
                             <li>
-                                <Link to="/products/HackingAgent">Paints &amp; Primers</Link>
+                                <Link to="/products/HackingAgent">Construction chemicals</Link>
                             </li>
                             <li>
                                 <Link to="/products/BJM">Dry Mix Products</Link>
@@ -110,28 +110,29 @@ const Footer: React.FC = () => {
 
                         </address>
                         <div className="social-links" aria-label="Social media links ">
-                            <a
-                                href="https://www.facebook.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Facebook"
+                            <a target="_blank"
+                                className="youtube"
+                                href="https://www.youtube.com/@Rockstar-x5u2c"
+                                aria-label="youtube"
                             >
-                                <FaFacebook aria-hidden="true" />
+                                <FaYoutube aria-hidden="true" />
                             </a>
 
 
                             <a
-                                href="https://twitter.com/"
+                                className="whatsapp"
+                                href="https://wa.me/918526872687"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Twitter"
+                                aria-label="WhatsApp"
                             >
-                                <FaTwitter aria-hidden="true" />
+                                <FaWhatsapp aria-hidden="true" />
                             </a>
 
 
                             <a
-                                href="https://www.linkedin.com/"
+                                className="linkedin"
+                                href="https://in.linkedin.com/company/as-building-solutions-pvt-ltd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"
@@ -140,7 +141,8 @@ const Footer: React.FC = () => {
                             </a>
 
                             <a
-                                href="https://www.instagram.com/"
+                                className="instagram"
+                                href="https://www.instagram.com/rockstar_asbspl/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"

@@ -105,51 +105,16 @@ const RockfixProductSection: React.FC<
       </div>
 
       {/* PRODUCT INFORMATION */}
-      <div className="bjm-info">
-        <div className="container">
-          <div className="row">
-
-            <div className="col-12">
-              <div className="bjm-info-wrapper">
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Coverage:
-                    <strong>{product.info.coverage}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Application:
-                    <strong>{product.info.application}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Setting Time:
-                    <strong>{product.info.settingTime}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Packaging:
-                    <strong>{product.info.packaging}</strong>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+{/* PRODUCT TAGLINE */}
+<div className="bjm-info">
+  <div className="container">
+    <div className="bjm-info-wrapper">
+      <p className="bjm-info-text">
+        Precision Bonding for Stronger, Faster Construction.
+      </p>
+    </div>
+  </div>
+</div>
     </section>
   );
 };

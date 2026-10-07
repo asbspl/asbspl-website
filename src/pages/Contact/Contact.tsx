@@ -4,11 +4,10 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
   FaInstagram,
   FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import "./Contact.css";
@@ -202,16 +201,17 @@ const Contact = () => {
                 </a>
 
                 <a
-                target="_blank"
-                  className="twitter"
-                  href="#"
-                  aria-label="Twitter"
+                  className="whatsapp"
+                  href="https://wa.me/918526872687"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                 >
-                  <FaTwitter />
+                  <FaWhatsapp aria-hidden="true" />
                 </a>
 
                 <a
-                target="_blank"
+                  target="_blank"
                   className="linkedIn"
                   href="https://in.linkedin.com/company/as-building-solutions-pvt-ltd"
                   aria-label="LinkedIn"
@@ -220,7 +220,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                target="_blank"
+                  target="_blank"
                   className="instagram"
                   href="https://www.instagram.com/rockstar_asbspl/"
                   aria-label="Instagram"
@@ -429,7 +429,7 @@ const Contact = () => {
       <section className="contact-map">
 
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d71967.49671740862!2d73.96670146260276!3d18.55935274873523!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bc2c3a5f602c5b7%3A0xac911644b7f6618a!2sA%20S%20Building%20Solutions%20Pvt%20Ltd%2C%20Flat%20No.04%2C%20Vishwa%20Vimal%20Complex%2C%20S.No.%2011%2C%20nr.%20Titan%20Eye%20Plus%20Showroom%2C%20Sambhaji%20Nagar%2C%20Kharadi%2C%20Pune%2C%20Maharashtra%20411014!3m2!1d18.5473633!2d73.9359971!5e0!3m2!1sen!2sin!4v1790857732068!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5912772504985!2d73.9359971!3d18.5473633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3a5f602c5b7%3A0xac911644b7f6618a!2sA%20S%20Building%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1791262774396!5m2!1sen!2sin"
           width="100%"
           height="350"
           style={{ border: 0 }}
@@ -439,7 +439,6 @@ const Contact = () => {
         />
 
       </section>
-
     </main>
   );
 };
