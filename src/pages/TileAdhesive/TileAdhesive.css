@@ -617,4 +617,10 @@
     .benefit-item:last-child {
         grid-column: 1 / -1;
     }
+    .tile-brand{
+        display: block;
+    }
+    .tile-brand-divider{
+        display: none;
+    }
 }

@@ -130,7 +130,6 @@ const ProductHighlights = () => {
                         <h4>
                           {highlight.title}
                         </h4>
-
                         <p>
                           {highlight.description}
                         </p>
