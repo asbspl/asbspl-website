@@ -1,19 +1,48 @@
+
 import React from "react";
 import "./Careers.css";
 
-import CareersBanner from "../../assets/careers-banner.png";
+import CareersBanner from "../../assets/careers-banner-bg.png";
 import CareersForm from "../../components/CareersForm/CareersForm";
 
 const Careers: React.FC = () => {
   return (
-    <><section className="careers-page">
+    <section className="careers-page">
 
       {/* Hero Banner */}
       <section className="careers-hero">
+
         <img
           src={CareersBanner}
           alt="Careers at A S Building Solutions"
-          className="careers-hero-image" />
+          className="careers-hero-image"
+        />
+
+        {/* Hero Content */}
+        <div className="careers-hero-overlay">
+          <div className="careers-hero-content">
+
+            <h1>Build Your Career With Us</h1>
+
+            <p>
+              Join the Rockstar team and be a part of a workplace where
+              ideas, innovation and teamwork create something meaningful.
+            </p>
+
+            <span>
+              Explore opportunities and grow with A S Building Solutions.
+            </span>
+
+          </div>
+        </div>
+
+      </section>
+
+      {/* Careers Form */}
+      <section className="careers-form-section">
+        <div>
+          <CareersForm />
+        </div>
       </section>
 
       {/* Careers Content */}
@@ -36,22 +65,19 @@ const Careers: React.FC = () => {
             </p>
 
             <div className="careers-resume-box">
-              <span>Please Send Resume :  </span>{" "}
-              <a href="mailto:contact@asbspl.com">
-                contact@asbspl.com
+              <span>Please Send Resume : </span>
+              <a href="mailto:Hr@asbspl.com">
+                Hr@asbspl.com
               </a>
             </div>
 
           </div>
         </div>
-
       </section>
-    </section><section>
-        <div>
-          <CareersForm />
-        </div>
-      </section></>
+
+    </section>
   );
 };
 
 export default Careers;
+

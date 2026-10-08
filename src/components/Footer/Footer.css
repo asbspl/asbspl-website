@@ -181,9 +181,9 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    border: 2px solid rgba(54, 85, 156, 0.25);
+    /* border: 2px solid rgba(54, 85, 156, 0.25); */
     border-radius: 25%;
-    color: #36559c;
+    color: #ffffff;
     font-size: larger;
 }
 
@@ -192,6 +192,23 @@
 }
 .footer-contact{
     color: #000 !important;
+}
+
+
+.youtube{
+    background-color: #FF0033;
+}
+.whatsapp{
+    background-color: #1daa61;
+}
+
+.linkedin{
+  background-color: #2957a4;
+   
+}
+.instagram{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
 }
 
 /* =========================================

@@ -7,8 +7,13 @@
   width: 100%;
   padding: 80px 0 70px;
   overflow: hidden;
-  background-color: #aeb4bf;
+  /* background-color: #aeb4bf; */
+  /* background-image: url(../../assets/product-slider-bg.png); */
+  background-image: url(../../assets/product-slider-bg-2.png);
   font-family: "Archivo", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
@@ -24,7 +29,7 @@
 
 .products-slider-heading h2 {
   margin: 0;
-  color: #ffffff;
+  color: #2957a4;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 800;
   line-height: 1.1;
@@ -339,7 +344,7 @@
 .products-slider-info h3 {
   margin: 0 0 5px;
 
-  color: #ffffff;
+  color: #080808;
 
   font-size: 18px;
   font-weight: 700;
@@ -350,7 +355,7 @@
 .products-slider-info p {
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(5, 5, 5, 0.85);
 
   font-size: 14px;
   font-weight: 500;

@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./ApplicationSectors.css";
 
 import application1 from "../../assets/application-img3.png";
-import application2 from "../../assets/application-img4.png";
+import application2 from "../../assets/surface-prepration.png";
 import application3 from "../../assets/application-img5.png";
 import application4 from "../../assets/application-img1.png";
-import application5 from "../../assets/application-img2.png";
 import allproductimg from "../../assets/allproduct-img.png"
 
 
@@ -18,29 +17,27 @@ interface Sector {
 const sectors: Sector[] = [
     {
         id: 1,
-        title: "STRUCTURE & BLOCK WORK",
-        image: application1,
-    },
-    {
-        id: 2,
         title: "Surface Preparation",
         image: application2,
     },
     {
-        id: 3,
-        title: "TILE & FLOOR FIXING",
-        image: application3,
+        id: 2,
+        title: "BLOCK WORK",
+        image: application1,
     },
-    {
-        id: 4,
-        title: "WALL PREPARATION",
+        {
+        id: 3,
+        title: "Plastering",
         image: application4,
     },
+
     {
-        id: 5,
-        title: "Bonding Agents",
-        image: application5,
-    }
+        id: 4,
+        title: "Tile Fixing",
+        image: application3,
+    },
+
+
 ];
 
 const ApplicationSectors: React.FC = () => {
@@ -163,7 +160,7 @@ const ApplicationSectors: React.FC = () => {
 
                 {/* Heading */}
                 <div className="application-heading">
-                    <h2>Application sectors</h2>
+                    <h2>Application Sectors</h2>
                 </div>
 
                 {/* Slider */}
@@ -237,7 +234,7 @@ const ApplicationSectors: React.FC = () => {
             </div>
         </section>
             <section className="single-image-section container-fuild">
-                <div className="container">
+                <div>
                 <img
                     src={allproductimg}
                     alt="Application sector"

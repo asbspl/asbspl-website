@@ -46,24 +46,19 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="services-info-text">
-                  TO ENHANCE CONSTRUCTION PRODUCTIVITY BY DELIVERING
-                  RELIABLE
-                  <br className="desktop-break" />
-                  AND DYNAMIC PRODUCTS
+                  To enhance construction productivity by delivering reliable and dynamic products
+      
                 </div>
               </div>
 
               {/* Vision */}
               <div className="services-info-row">
-                <div className="services-tab">
-                  OUR VISION  
+                <div className="services-tab our-vision-btn">
+                  OUR VISION
                 </div>
 
                 <div className="services-info-text">
-                  TO ENHANCE CONSTRUCTION PRODUCTIVITY BY DELIVERING
-                  RELIABLE
-                  <br className="desktop-break" />
-                  AND DYNAMIC PRODUCTS
+                  To consistently explore pioneering ways to bring paramount value to our customers
                 </div>
               </div>
 

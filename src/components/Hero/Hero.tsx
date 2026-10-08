@@ -14,11 +14,10 @@ const Hero = () => {
 
       {/* Top-right contact number */}
       <header className="hero-header">
-<a href="tel:+919876543210" className="hero-phone">
+<a href="tel:+918526872687" className="hero-phone">
   <FaPhoneAlt className="phone-icon" aria-hidden="true" />
   +91 85 2687 2687
 </a>
-
       </header>
       
 
@@ -41,15 +40,9 @@ const Hero = () => {
                <b>We're the best Products provider in India</b> 
               </p>
 
-              <a
-                href="#products"
-                
-              ><button className="hero-button">
-                <Link to="/products/TileAdhesive">
-  View Products
+             <Link to="/products/TileAdhesive" className="hero-button">
+  VIEW PRODUCTS
 </Link>
-                </button>
-              </a>
 
             </div>
           </div>

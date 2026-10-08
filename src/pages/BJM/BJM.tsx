@@ -7,6 +7,7 @@ import KeyBenefits from "../../components/KeyBenefits/KeyBenefits"
 import ApplicationProcess from "../../components/ApplicationProcess/ApplicationProcess"
 import WhereToUse from "../../components/WhereToUse/WhereToUse"
 import Precautions from "../../components/Precautions/Precautions"
+import logo from "../../assets/header-logo.png"
 
 interface ProductInfo {
   coverage: string;
@@ -84,6 +85,7 @@ const RockfixProductSection: React.FC<
             {/* CONTENT */}
             <div className="col-12 col-md-8 col-lg-8">
               <div className="bjm-content">
+                           <img className="product-logo" src={logo} alt="" />
 
                 <h1 className="bjm-title">
                   {product.heading}
@@ -105,51 +107,16 @@ const RockfixProductSection: React.FC<
       </div>
 
       {/* PRODUCT INFORMATION */}
-      <div className="bjm-info">
-        <div className="container">
-          <div className="row">
-
-            <div className="col-12">
-              <div className="bjm-info-wrapper">
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Coverage:
-                    <strong>{product.info.coverage}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Application:
-                    <strong>{product.info.application}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Setting Time:
-                    <strong>{product.info.settingTime}</strong>
-                  </span>
-                </div>
-
-                <div className="bjm-info-item">
-                  <span className="check-icon">✓</span>
-                  <span>
-                    Packaging:
-                    <strong>{product.info.packaging}</strong>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+{/* PRODUCT TAGLINE */}
+<div className="bjm-info">
+  <div className="container">
+    <div className="bjm-info-wrapper">
+      <p className="bjm-info-text">
+        Precision Bonding for Stronger, Faster Construction.
+      </p>
+    </div>
+  </div>
+</div>
     </section>
   );
 };

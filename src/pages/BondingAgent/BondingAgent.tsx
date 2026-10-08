@@ -7,6 +7,8 @@ import BondingAgentBg from "../../assets/bonding-agent-bg.png";
 import KeyBenefits from "../../components/KeyBenefits/KeyBenefits";
 import WhereToUse from "../../components/WhereToUse/WhereToUse";
 import ApplicationProcess from "../../components/ApplicationProcess/ApplicationProcess";
+import logo from "../../assets/header-logo.png"
+
 
 interface ProductInfo {
   coverage: string;
@@ -109,6 +111,7 @@ const BondingAgentProductSection: React.FC<
             <div className="col-12 col-md-8 col-lg-8">
 
               <div className="bonding-agent-content">
+               <img className="product-logo" src={logo} alt="" />
 
                 <h1 className="bonding-agent-title">
                   {product.heading}
@@ -136,96 +139,14 @@ const BondingAgentProductSection: React.FC<
       {/* =========================================
           PRODUCT INFORMATION
       ========================================= */}
-
       <div className="bonding-agent-info">
-
         <div className="container">
-
-          <div className="row">
-
-            <div className="col-12">
-
-              <div className="bonding-agent-info-wrapper">
-
-                {/* Coverage */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Coverage:
-                    <strong>
-                      {product.info.coverage}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                {/* Application */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Application:
-                    <strong>
-                      {product.info.application}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                {/* Setting Time */}
-
-                {/* <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Setting Time:
-                    <strong>
-                      {product.info.settingTime}
-                    </strong>
-                  </span>
-
-                </div> */}
-
-
-                {/* Packaging */}
-
-                <div className="bonding-agent-info-item">
-
-                  <span className="bonding-agent-check-icon">
-                    ✓
-                  </span>
-
-                  <span>
-                    Packaging:
-                    <strong>
-                      {product.info.packaging}
-                    </strong>
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
+          <div className="bonding-agent-info-wrapper">
+            <p className="bonding-agent-info-text">
+              Superior Grip. Stronger Bonds. Better Finishes.
+            </p>
           </div>
-
         </div>
-
       </div>
 
     </section>

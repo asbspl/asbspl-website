@@ -59,19 +59,19 @@ const whereToUseData: Record<
 
   bjm: [
     {
-      title: "Interior Floor Tiles",
+      title: "AAC Block Masonry",
       image: residentialflooring,
     },
     {
-      title: "Dry Indoor Areas",
+      title: "Concrete & Fly Ash Blocks",
       image: bathroomwallfloor,
     },
     {
-      title: "Small to Medium Size Tiles",
+      title: "Internal & External Walls",
       image: balconyoutdoorarea,
     },
     {
-      title: "Low Traffic Areas",
+      title: "Residential & Commercial Projects",
       image: commercialinterior,
     },
   ],

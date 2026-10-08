@@ -1,5 +1,5 @@
 import "./ProductHighlights.css";
-import highlightimg from "../../assets/highlight-img.png";
+import highlightimg from "../../assets/highlight-img-about.png";
 
 interface HighlightItem {
   title: string;
@@ -17,8 +17,36 @@ interface ProductHighlightsData {
   coreValue: string;
 }
 
-const productHighlightsData: ProductHighlightsData = {
+/* 
+ * Calculate completed years of service.
+ * Company start date: 11 June 2001
+ */
+const getYearsOfService = (startDate: Date): number => {
+  const today = new Date();
 
+  let years = today.getFullYear() - startDate.getFullYear();
+
+  const anniversaryThisYear = new Date(
+    today.getFullYear(),
+    startDate.getMonth(),
+    startDate.getDate()
+  );
+
+  // If this year's anniversary has not arrived yet,
+  // subtract one year.
+  if (today < anniversaryThisYear) {
+    years--;
+  }
+
+  return years;
+};
+
+// Company started on 1 aug 2001
+const yearsOfService = getYearsOfService(
+  new Date(2001, 7, 1)
+);
+
+const productHighlightsData: ProductHighlightsData = {
   title: "Rockstar",
 
   companyName:
@@ -34,16 +62,17 @@ const productHighlightsData: ProductHighlightsData = {
 
   highlights: [
     {
-      title: "Serving 25 Years",
-      icon: "25",
+      title: `Serving ${yearsOfService} Years`,
+      icon: `${yearsOfService}`,
       description:
-        "We have been delivering our products to our customers for 25 years, with a strong focus on quality, reliability, and customer satisfaction.",
+        `We have been delivering our products to our customers for ${yearsOfService} years, with a strong focus on quality, reliability, and customer satisfaction.`,
     },
+
     {
       title: "The Largest Goal",
       icon: "★",
       description:
-        'Our main goal is to consistently explore pioneering ways to bring paramount value to our customers and set benchmarks in quality of products, services, and customer satisfaction.',
+        "Our main goal is to consistently explore pioneering ways to bring paramount value to our customers and set benchmarks in quality of products, services, and customer satisfaction.",
     },
   ],
 
@@ -97,11 +126,14 @@ const ProductHighlights = () => {
                       key={highlight.title}
                     >
                       <div className="highlight-content">
-                        <h4>{highlight.title}</h4>
 
+                        <h4>
+                          {highlight.title}
+                        </h4>
                         <p>
                           {highlight.description}
                         </p>
+
                       </div>
                     </article>
                   )

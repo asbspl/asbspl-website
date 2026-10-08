@@ -5,20 +5,16 @@
 .hero-section {
     position: relative;
     min-height: 100vh;
-
     display: flex;
     align-items: center;
-
     overflow: hidden;
-
     color: #ffffff;
-
-    background-image: url("../../assets/hero-bg.png");
+    background-image: linear-gradient(171deg, rgba(5, 12, 22, 0.95) 0%, rgb(5 12 22) 13%, rgba(5, 12, 22, 0.45) 72%, rgba(5, 12, 22, 0.10) 100%), url(/src/assets/hero-bg-new.png);
     background-size: cover;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
+    /* background-position: 10% center; */
 }
-
 
 /* =========================================
    DARK OVERLAY
@@ -162,6 +158,7 @@
     padding: 8px 20px;
     font-weight: 500;
     border-radius: 6px;
+    text-decoration: none;
 }
 .hero-button a{
         color: white;
@@ -283,7 +280,7 @@
         display: flex;
         align-items: center;
 
-        background-position: 65% center;
+        background-position: 0% center;
     }
 
     .hero-overlay {
