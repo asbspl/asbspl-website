@@ -7,6 +7,8 @@ import BondingAgentBg from "../../assets/bonding-agent-bg.png";
 import KeyBenefits from "../../components/KeyBenefits/KeyBenefits";
 import WhereToUse from "../../components/WhereToUse/WhereToUse";
 import ApplicationProcess from "../../components/ApplicationProcess/ApplicationProcess";
+import logo from "../../assets/header-logo.png"
+
 
 interface ProductInfo {
   coverage: string;
@@ -109,6 +111,7 @@ const BondingAgentProductSection: React.FC<
             <div className="col-12 col-md-8 col-lg-8">
 
               <div className="bonding-agent-content">
+               <img className="product-logo" src={logo} alt="" />
 
                 <h1 className="bonding-agent-title">
                   {product.heading}

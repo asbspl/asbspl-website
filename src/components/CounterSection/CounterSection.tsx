@@ -20,7 +20,7 @@ interface CounterItem {
 const counterData: CounterItem[] = [
   {
     value: 140,
-    label: "Active Hubs",
+    label: "Active Sites", 
     suffix: "+",
     icon: HiOutlineOfficeBuilding,
   },

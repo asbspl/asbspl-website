@@ -118,7 +118,7 @@ const QuoteSection = () => {
       // Web3Forms Access Key
       formDataToSend.append(
         "access_key",
-        "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4"
+        "c9950aa7-8ac1-432a-ad6e-bc969e92b40a"
       );
 
       // Form fields

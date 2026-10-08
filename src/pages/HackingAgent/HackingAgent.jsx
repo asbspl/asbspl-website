@@ -4,6 +4,8 @@ import WhereToUse from "../../components/WhereToUse/WhereToUse";
 import ApplicationProcess from "../../components/ApplicationProcess/ApplicationProcess";
 import HackingAgentHeroImg from "../../assets/hackoplast-img.png";
 import HackingAgentBg from "../../assets/hackoplast-bg.png";
+import logo from "../../assets/header-logo.png"
+
 
 const HackingAgent = () => {
   return (
@@ -35,16 +37,13 @@ const HackingAgent = () => {
                       className="img-fluid"
                     />
                   </div>
-
-                  <h3>HACKOPLAST</h3>
-
                 </div>
               </div>
 
               {/* Content */}
               <div className="col-lg-8 col-md-7 col-12">
                 <div className="hacking-agent-content">
-
+                   <img className="product-logo" src={logo} alt="" />
                   <h1>HACKOPLAST</h1>
 
                   <h4>
