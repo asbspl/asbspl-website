@@ -40,14 +40,13 @@ const AppRoutes = () => {
       <Route path="/contact" element={<Contact />} />
 
       {/* Product Pages */}
+            <Route
+        path="/products/BJM"
+        element={<BJM />}
+      />
       <Route
         path="/products/TileAdhesive"
         element={<TileAdhesive />}
-      />
-
-      <Route
-        path="/products/BJM"
-        element={<BJM />}
       />
 
       <Route

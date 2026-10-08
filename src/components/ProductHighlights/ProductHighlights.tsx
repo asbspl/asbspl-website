@@ -1,5 +1,5 @@
 import "./ProductHighlights.css";
-import highlightimg from "../../assets/highlight-img.png";
+import highlightimg from "../../assets/highlight-img-about.png";
 
 interface HighlightItem {
   title: string;

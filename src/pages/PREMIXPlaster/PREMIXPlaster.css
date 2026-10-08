@@ -13,7 +13,6 @@
 .Premix-bg {
     position: relative;
     width: 100%;
-    height: 560px;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -50,7 +49,7 @@
     letter-spacing: -2px;
 }
 
-.tile-products {
+.tile-products-p {
     position: relative;
     z-index: 1;
 
@@ -83,6 +82,61 @@
     border-top: 1px solid #d4d4d4;
 }
 
+.product-logo {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.premix-product-display {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 18px;
+    position: relative;
+}
+
+.sand-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(24px, 3vw, 42px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sand-label span {
+    display: block;
+}
+
+.sand-label-left {
+    text-align: right;
+    color: #0f4886;
+        background-color: #cacaca;
+    padding: 11px;
+    border-radius: 20px;
+
+}
+
+.sand-label-right {
+    text-align: left;
+        color: #f3e200;
+    background-color: #9ca1ab;
+    padding: 11px;
+    border-radius: 20px;
+}
+
+.premix-product-display .tile-products-p {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: 0;
+    object-fit: contain;
+}
 
 @media (min-width: 768px) {
 
@@ -91,8 +145,7 @@
         margin-top: 10px;
     }
 
-    .tile-products {
-        width: 560px;
+    .tile-products-p {
         margin-top: 15px;
     }
 }
@@ -111,7 +164,7 @@
         font-size: 42px;
         margin-top: 5px;
     }
-        .tile-products {
+        .tile-products-p {
         width: 90%;
         margin-top: 15px;
     }
@@ -136,9 +189,12 @@
         margin-top: 5px;
     }
 
-    .tile-products {
+    .tile-products-p {
         width: 90%;
         margin-top: 15px;
+    }
+    .sand-label{
+        display: none;
     }
 
 

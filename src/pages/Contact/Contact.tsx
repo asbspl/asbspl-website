@@ -41,7 +41,7 @@ const Contact = () => {
 
     // Web3Forms Access Key
     const accessKey =
-      "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4";
+      "c9950aa7-8ac1-432a-ad6e-bc969e92b40a";
 
     // Add Web3Forms Access Key
     formData.append("access_key", accessKey);

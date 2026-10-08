@@ -7,6 +7,7 @@ import KeyBenefits from "../../components/KeyBenefits/KeyBenefits"
 import ApplicationProcess from "../../components/ApplicationProcess/ApplicationProcess"
 import WhereToUse from "../../components/WhereToUse/WhereToUse"
 import Precautions from "../../components/Precautions/Precautions"
+import logo from "../../assets/header-logo.png"
 
 interface ProductInfo {
   coverage: string;
@@ -84,6 +85,7 @@ const RockfixProductSection: React.FC<
             {/* CONTENT */}
             <div className="col-12 col-md-8 col-lg-8">
               <div className="bjm-content">
+                           <img className="product-logo" src={logo} alt="" />
 
                 <h1 className="bjm-title">
                   {product.heading}

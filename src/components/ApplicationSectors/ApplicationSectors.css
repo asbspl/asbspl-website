@@ -316,7 +316,6 @@
   width: 100%;
   overflow: hidden;
   background-color: #DEE1E6FF;
-  padding: 100px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,7 +341,6 @@
 @media (max-width: 767px) {
   .single-image-section {
     width: 100%;
-    padding: 30px 0px;
   }
 
   .single-section-image {

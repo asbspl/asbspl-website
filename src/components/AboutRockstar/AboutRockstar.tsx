@@ -2,7 +2,8 @@ import React from "react";
 import "./AboutRockstar.css";
 
 import AboutHeroImg from "../../assets/aboutpage-img.png";
-import AboutBuildingImg from "../../assets/highlight-img.png";
+import AboutBuildingImg from "../../assets/highlight-img-bg.png";
+import rockstarlogo from "../../assets/header-logo.png"
 
 const AboutRockstar: React.FC = () => {
   return (
@@ -68,8 +69,7 @@ const AboutRockstar: React.FC = () => {
                 />
 
                 <div className="rockstar-logo" aria-hidden="true">
-                  Rockstar
-                  <sup>®</sup>
+               <img className="rockstar-logo-img" src={rockstarlogo} alt="rockstarlogo logo" />
                 </div>
               </div>
             </div>

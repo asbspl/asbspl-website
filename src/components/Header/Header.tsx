@@ -5,10 +5,6 @@ import headerLogo from "../../assets/header-logo.png";
 
 const productMenu = [
   {
-    label: "Tile Adhesive",
-    path: "/products/TileAdhesive",
-  },
-  {
     label: "BJM",
     path: "/products/BJM",
   },
@@ -16,6 +12,11 @@ const productMenu = [
     label: "PREMIX Plaster",
     path: "/products/PREMIXPlaster",
   },
+  {
+    label: "Tile Adhesive",
+    path: "/products/TileAdhesive",
+  },
+
   {
     label: "Bonding Agent",
     path: "/products/BondingAgent",
@@ -149,8 +150,8 @@ const Header = () => {
                 <Link
                   to="/Technical-Data-Downloads"
                   className={`nav-link ${isActive("/Technical-Data-Downloads")
-                      ? "active"
-                      : ""
+                    ? "active"
+                    : ""
                     }`}
                   onClick={closeMenu}
                 >
