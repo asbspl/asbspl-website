@@ -62,13 +62,13 @@ const Footer: React.FC = () => {
 
                         <ul className="footer-links footer-text">
                             <li>
-                                <Link to="/products/HackingAgent">Construction chemicals</Link>
+                                <Link to="#">Construction chemicals</Link>
                             </li>
                             <li>
-                                <Link to="/products/BJM">Dry Mix Products</Link>
+                                <Link to="#">Dry Mix Products</Link>
                             </li>
                             <li>
-                                <Link to="/products/PREMIXPlaster">
+                                <Link to="#">
                                     Plaster, Putty &amp; Crack Filler
                                 </Link>
                             </li>

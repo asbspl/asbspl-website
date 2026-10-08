@@ -5,7 +5,6 @@ import application1 from "../../assets/application-img3.png";
 import application2 from "../../assets/surface-prepration.png";
 import application3 from "../../assets/application-img5.png";
 import application4 from "../../assets/application-img1.png";
-import application5 from "../../assets/application-img2.png";
 import allproductimg from "../../assets/allproduct-img.png"
 
 

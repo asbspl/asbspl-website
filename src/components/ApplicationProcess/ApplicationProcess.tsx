@@ -49,12 +49,6 @@ import StuccoPlaster from "../../assets/rockstar product brochure_STUCCO_PLASTER
 
 // ================= TYPES =================
 
-interface ProcessStep {
-  title: string;
-  description: string;
-  image: string;
-}
-
 interface ApplicationProcessProps {
   product:
     | "tileAdhesive"
