@@ -37,7 +37,7 @@ const WEBSITE_KNOWLEDGE: KnowledgeItem[] = [
       "company",
       "about",
       "asbspl",
-      "a s building solutions",
+      "A S Building Solutions Pvt Ltd",
       "rockstar",
       "history",
       "pune",

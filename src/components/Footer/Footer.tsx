@@ -96,8 +96,8 @@ const Footer: React.FC = () => {
 
                             <div className="contact-item">
 
-                                <a className="footer-contact" href="tel:+918526872687" aria-label="Call A S Building Solutions">
-                                    Phone:- +91-852-687-2687
+                                <a className="footer-contact" href="tel:+918526872687" aria-label="Call A S Building Solutions Pvt Ltd">
+                                    Phone:- +91-85-2687-2687
                                 </a>
                             </div>
 

@@ -22,7 +22,7 @@ const sectors: Sector[] = [
     },
     {
         id: 2,
-        title: "BLOCK WORK",
+        title: "Block Work",
         image: application1,
     },
         {

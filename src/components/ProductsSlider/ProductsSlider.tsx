@@ -28,9 +28,10 @@ const products: Product[] = [
     alt: "High-performance Block Jointing Mortar",
     route: "/products/BJM",
   },
+
   {
     id: 2,
-    name: "T100",
+    name: "Rockfix T100",
     category: "Tile Adhesives",
     image: product2,
     alt: "High-strength adhesives for durable tile fixing",
@@ -38,7 +39,7 @@ const products: Product[] = [
   },
   {
     id: 3,
-    name: "T200",
+    name: "Rockfix T200",
     category: "Tile Adhesives",
     image: product3,
     alt: "High-strength adhesives for durable tile fixing",
@@ -46,7 +47,7 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: "T300",
+    name: "Rockfix T300",
     category: "Tile Adhesives",
     image: product4,
     alt: "High-strength adhesives for durable tile fixing",

@@ -14,7 +14,7 @@ const Careers: React.FC = () => {
 
         <img
           src={CareersBanner}
-          alt="Careers at A S Building Solutions"
+          alt="Careers at A S Building Solutions Pvt Ltd"
           className="careers-hero-image"
         />
 
@@ -30,7 +30,7 @@ const Careers: React.FC = () => {
             </p>
 
             <span>
-              Explore opportunities and grow with A S Building Solutions.
+              Explore opportunities and grow with A S Building Solutions Pvt Ltd.
             </span>
 
           </div>

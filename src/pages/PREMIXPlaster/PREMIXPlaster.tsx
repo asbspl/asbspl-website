@@ -60,10 +60,6 @@ const PREMIXPlaster = () => {
             "Consistent output, factory processed",
             "Consistent Mix • Strong Bond • Fast Application",
           ]}
-          coverage="18–22 sq.ft./mm"
-          use="Wall Plaster"
-          time="90–120 min"
-          pack="40 kg"
           backgroundImage={brickWall}
         />
       </div>
@@ -81,10 +77,6 @@ const PREMIXPlaster = () => {
             "Preferred in smaller or conventional projects",
             "Easy Workability • Smooth Finish • Natural Feel",
           ]}
-          coverage="16–20 sq.ft./mm"
-          use="Wall Plaster"
-          time="90–120 min"
-          pack="40 kg"
           backgroundImage={brickWall}
         />
       </div>

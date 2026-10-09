@@ -265,7 +265,7 @@
     .solution-breadcrumb__list {
         min-height: auto;
 
-        display: grid;
+        display: block;
         grid-template-columns: repeat(2, 1fr);
         gap: 4px 8px;
     }

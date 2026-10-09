@@ -132,7 +132,7 @@ const ProductBrochures: React.FC = () => {
       // Web3Forms Access Key
       formPayload.append(
         "access_key",
-        "1b35ef7d-ee4c-4579-9f20-40f800b7c8d4"
+        "1e404c77-2308-4a89-b201-4c25b9155406"
       );
 
       // User information

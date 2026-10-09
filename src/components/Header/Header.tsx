@@ -5,11 +5,11 @@ import headerLogo from "../../assets/header-logo.png";
 
 const productMenu = [
   {
-    label: "BJM",
+    label: "Block Jointing Mortar",
     path: "/products/BJM",
   },
   {
-    label: "PREMIX Plaster",
+    label: "Premix Plaster",
     path: "/products/PREMIXPlaster",
   },
   {
@@ -101,7 +101,7 @@ const Header = () => {
                     }`}
                   onClick={closeMenu}
                 >
-                  About
+                  About Us
                 </Link>
               </li>
 

@@ -31,12 +31,6 @@ import ApplicationProcess from "../ApplicationProcess/ApplicationProcess";
    TYPES
 ========================================================= */
 
-interface ProductInfo {
-  coverage: string;
-  application: string;
-  settingTime: string;
-  packaging: string;
-}
 
 interface UseItem {
   title: string;
@@ -51,7 +45,6 @@ interface ProductData {
   heading: string;
   description: string;
   features: string[];
-  info: ProductInfo;
   useItems: UseItem[];
 }
 
@@ -79,13 +72,6 @@ const products: ProductData[] = [
       "Small Tiles",
       "Light Duty",
     ],
-
-    info: {
-      coverage: "XX sq.ft",
-      application: "Small Tiles",
-      settingTime: "XX min",
-      packaging: "20kg",
-    },
 
     useItems: [
       {
@@ -122,17 +108,11 @@ const products: ProductData[] = [
       "Perfect mix of strength and flexibility for everyday construction needs.",
 
     features: [
-      "Most Popular ⭐",
+      "Most Popular",
       "All-Rounder",
       "Wall & Floor",
     ],
 
-    info: {
-      coverage: "XX sq.ft",
-      application: "Medium Tiles",
-      settingTime: "XX min",
-      packaging: "20kg",
-    },
 
     useItems: [
       {
@@ -174,12 +154,6 @@ const products: ProductData[] = [
       "Stone & Large Tiles",
     ],
 
-    info: {
-      coverage: "XX sq.ft",
-      application: "Stone & Large Tiles",
-      settingTime: "XX min",
-      packaging: "20kg",
-    },
 
     useItems: [
       {
@@ -306,90 +280,6 @@ const RockfixProductSection: React.FC<{
       {/* =================================================
           INFORMATION BAR
       ================================================= */}
-
-      <div className="rockfix-info">
-
-        <div className="container">
-
-          <div className="row justify-content-center">
-
-            <div className="col-12">
-
-              <div className="info-items">
-
-                <div className="info-item">
-
-                  <span className="check">
-                    ✓
-                  </span>
-
-                  <span>
-                    Coverage:{" "}
-                    <strong>
-                      {product.info.coverage}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                <div className="info-item">
-
-                  <span className="check">
-                    ✓
-                  </span>
-
-                  <span>
-                    Application:{" "}
-                    <strong>
-                      {product.info.application}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                <div className="info-item">
-
-                  <span className="check">
-                    ✓
-                  </span>
-
-                  <span>
-                    Setting Time:{" "}
-                    <strong>
-                      {product.info.settingTime}
-                    </strong>
-                  </span>
-
-                </div>
-
-
-                <div className="info-item">
-
-                  <span className="check">
-                    ✓
-                  </span>
-
-                  <span>
-                    Packaging:{" "}
-                    <strong>
-                      {product.info.packaging}
-                    </strong>
-                  </span>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
 
       {/* =================================================
           WHERE TO USE

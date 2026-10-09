@@ -4,12 +4,12 @@
 
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 84vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     color: #ffffff;
-    background-image: linear-gradient(171deg, rgba(5, 12, 22, 0.95) 0%, rgb(5 12 22) 13%, rgba(5, 12, 22, 0.45) 72%, rgba(5, 12, 22, 0.10) 100%), url(/src/assets/hero-bg-new.png);
+    background-image: url(/src/assets/hero-bg-new1.png);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -53,9 +53,42 @@
         transform 0.2s ease;
 }
 
+
+/* Continuous phone ringing animation */
 .phone-icon {
-    color: #f5b72c;
-    font-size: 1.05em;
+  display: inline-block;
+  transform-origin: center;
+  color: #f5b72c;
+  animation: phoneRing 1.5s ease-in-out infinite;
+}
+
+@keyframes phoneRing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30%,
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(15deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-icon {
+    animation: none;
+  }
 }
 
 .hero-phone:hover {
@@ -76,6 +109,7 @@
 .hero-content {
     position: relative;
     z-index: 2;
+    margin-top: -65px;
 }
 
 
@@ -147,7 +181,7 @@
     font-weight: 800;
     line-height: 0.98;
     letter-spacing: -0.045em;
-    font-size: 92px;
+    font-size: 85px;
     font-family: Archivo;
 }
 
@@ -160,8 +194,9 @@
     border-radius: 6px;
     text-decoration: none;
 }
-.hero-button a{
-        color: white;
+
+.hero-button a {
+    color: white;
     text-decoration: none;
 }
 
@@ -244,7 +279,7 @@
     background: #ffffff;
 }
 
-.hero-description{
+.hero-description {
     line-height: 70px;
 }
 
@@ -279,8 +314,9 @@
     .hero-section {
         display: flex;
         align-items: center;
-
         background-position: 0% center;
+        min-height: auto;
+        padding: 127px 0px;
     }
 
     .hero-overlay {
@@ -331,7 +367,7 @@
 
         font-size: 0.98rem;
 
-        line-height:23px;
+        line-height: 23px;
     }
 
     .hero-btn {
