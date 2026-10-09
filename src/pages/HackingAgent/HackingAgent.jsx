@@ -5,7 +5,7 @@ import ApplicationProcess from "../../components/ApplicationProcess/ApplicationP
 import HackingAgentHeroImg from "../../assets/hackoplast-img.png";
 import HackingAgentBg from "../../assets/hackoplast-bg.png";
 import logo from "../../assets/header-logo.png"
-
+import hackoplastlogo from "../../assets/hackoplast-logo1.png"
 
 const HackingAgent = () => {
   return (
@@ -43,8 +43,18 @@ const HackingAgent = () => {
               {/* Content */}
               <div className="col-lg-8 col-md-7 col-12">
                 <div className="hacking-agent-content">
-                   <img className="product-logo" src={logo} alt="" />
-                  <h1>HACKOPLAST</h1>
+                                   <div className="hackoplast-brand">
+                  <img
+                    className="product-logo"
+                    src={logo}
+                    alt="Rockstar Logo"
+                  />
+
+                  <span className="tile-brand-divider"></span>
+
+                  <img  className="hackoplast-logo" src={hackoplastlogo} alt="" />
+                </div>
+                  <h1>Hackoplast</h1>
 
                   <h4>
                     Make Every Surface Plaster-Ready
@@ -67,7 +77,7 @@ const HackingAgent = () => {
           <div className="container">
             <div className="hacking-agent-info-wrapper">
               <p className="hacking-agent-info-text">
-                Superior Grip. Stronger Bonds. Better Finishes.
+                Superior Surface Grip, Stronger Plaster Bonding, And Lasting Durability
               </p>
             </div>
           </div>

@@ -83,9 +83,7 @@
 
   display: block;
 
-  filter: drop-shadow(
-    0 8px 8px rgba(0, 0, 0, 0.35)
-  );
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.35));
 }
 
 
@@ -167,7 +165,7 @@
 ========================================= */
 
 .bonding-agent-info {
-   color: #315b9d;
+  color: #315b9d;
 
   min-height: 60px;
 
@@ -193,8 +191,23 @@
 
   font-weight: 700;
 
-    color: #315b9d;
+  color: #315b9d;
 
+}
+
+.rockbond-brand {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.rockbondlogo-logo {
+    width: 237px;
+    background: #fed300;
+    margin-top: 17px;
+    border-radius: 10px;
 }
 
 /* =========================================
@@ -285,35 +298,41 @@
 
   /* INFO */
 
-@media (max-width: 767.98px) {
+  @media (max-width: 767.98px) {
 
-  .bonding-agent-info {
-    min-height: 60px;
-    /* padding: 15px 0; */
-  }
+    .bonding-agent-info {
+      min-height: 60px;
+      /* padding: 15px 0; */
+    }
 
-  .bonding-agent-info-text {
-    font-size: 17px;
-    line-height: 1.4;
-    /* padding: 0 15px; */
-  }
+    .bonding-agent-info-text {
+      font-size: 17px;
+      line-height: 1.4;
+      /* padding: 0 15px; */
+    }
+    .rockbond-brand {
+  display: block  ;
+
 }
 
-@media (max-width: 480px) {
-
-  .bonding-agent-info {
-    min-height: 60px;
   }
 
-  .bonding-agent-info-text {
-    font-size: 17px;
+  @media (max-width: 480px) {
+
+    .bonding-agent-info {
+      min-height: 60px;
+    }
+
+    .bonding-agent-info-text {
+      font-size: 17px;
+    }
   }
-}
 
 
   .bonding-agent-check-icon {
     font-size: 17px;
   }
+
 
 }
 

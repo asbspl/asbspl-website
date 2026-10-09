@@ -7,6 +7,7 @@ import AppRoutes from "./routes/AppRoutes";
 import AIChatbot from "./components/AIChatbot/AIChatbot";
 import Loader from "./components/Loader/Loader";
 
+
 const App = () => {
   const [pageLoading, setPageLoading] = useState(true);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);

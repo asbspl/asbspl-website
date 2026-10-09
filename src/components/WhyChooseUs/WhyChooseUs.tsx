@@ -1,5 +1,6 @@
 import "./WhyChooseUs.css";
 import yearsimg from "../../assets/25-years.png"
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
   return (
@@ -47,9 +48,9 @@ const WhyChooseUs = () => {
 
               </div>
 
-              <button className="why-button">
+              <Link to="/solutions" className="why-button">
                 PRODUCTS BUSINESS
-              </button>
+              </Link>
 
             </div>
           </div>

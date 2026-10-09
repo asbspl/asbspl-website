@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import {
-  HiOutlineOfficeBuilding,
+  HiOutlineOfficeBuilding ,
   HiOutlineUsers,
   HiOutlineUserGroup,
 } from "react-icons/hi";
 import { PiMedal } from "react-icons/pi";
-import { MdOutlineRecycling } from "react-icons/md";
+import { FaWeightHanging } from "react-icons/fa";
 
 import "./CounterSection.css";
 
@@ -19,14 +19,15 @@ interface CounterItem {
 
 const counterData: CounterItem[] = [
   {
-    value: 140,
+    value: 450,
     label: "Active Sites", 
     suffix: "+",
     icon: HiOutlineOfficeBuilding,
   },
   {
-    value: 620,
+    value: 1000,
     label: "Happy Clients",
+    suffix: "+",
     icon: HiOutlineUsers,
   },
   {
@@ -34,16 +35,18 @@ const counterData: CounterItem[] = [
     label: "Tons Yearly",
     suffix: "M",
     decimals: 1,
-    icon: MdOutlineRecycling,
+    icon: FaWeightHanging ,
   },
   {
-    value: 210,
-    label: "Won Awards",
+    value: 130,
+    label: "Active Dealers",
+    suffix: "+",
     icon: PiMedal,
   },
   {
-    value: 8760,
+    value: 400,
     label: "Expert Contractors",
+    suffix: "+",
     icon: HiOutlineUserGroup,
   },
 ];

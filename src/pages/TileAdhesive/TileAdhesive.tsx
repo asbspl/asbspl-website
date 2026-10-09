@@ -79,7 +79,7 @@ const TileAdhesive = () => {
 
         {/* Caption */}
         <div className="tile-adhesive-caption">
-          High-strength adhesives for durable tile fixing
+          Advanced Tile Adhesives For Strong Bonding, Lasting Durability, And Perfect Finishes
         </div>
 
       </section>

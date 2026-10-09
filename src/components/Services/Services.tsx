@@ -35,8 +35,7 @@ const Services: React.FC = () => {
 
               {/* Description */}
               <p className="services-description">
-                The entire range of products is manufactured at our
-                state-of-the-art facilities at Pune.
+                The Entire Range Of Products Is Manufactured At Our State-Of-The-Art Facilities At Pune.
               </p>
 
               {/* Mission */}
@@ -46,7 +45,7 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="services-info-text">
-                  To enhance construction productivity by delivering reliable and dynamic products
+                  To Enhance Construction Productivity By Delivering Reliable And Dynamic Products
       
                 </div>
               </div>
@@ -58,7 +57,7 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="services-info-text">
-                  To consistently explore pioneering ways to bring paramount value to our customers
+                 To Consistently Explore Pioneering Ways To Bring Paramount Value To Our Customers
                 </div>
               </div>
 

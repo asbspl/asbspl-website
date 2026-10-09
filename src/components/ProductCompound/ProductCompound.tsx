@@ -15,13 +15,6 @@ export interface ProductCompoundProps {
 
   points: string[];
 
-  coverage: string;
-
-  use: string;
-
-  time: string;
-
-  pack: string;
 
   reverse?: boolean;
 
@@ -37,10 +30,6 @@ const ProductCompound: React.FC<ProductCompoundProps> = ({
   heading,
   description,
   points,
-  coverage,
-  use,
-  time,
-  pack,
   reverse = false,
   backgroundImage,
   className = "",
@@ -99,33 +88,7 @@ const ProductCompound: React.FC<ProductCompoundProps> = ({
       </div>
 
       {/* Product Details */}
-      <div className="product-details">
-        <div className="container-fluid">
-          <div className="product-details-content">
-            <span>
-              <strong>✓</strong> Coverage: {coverage}
-            </span>
 
-            <span className="separator">•</span>
-
-            <span>
-              <strong>✓</strong> Use: {use}
-            </span>
-
-            <span className="separator">•</span>
-
-            <span>
-              <strong>✓</strong> Time: {time}
-            </span>
-
-            <span className="separator">•</span>
-
-            <span>
-              <strong>✓</strong> Pack: {pack}
-            </span>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

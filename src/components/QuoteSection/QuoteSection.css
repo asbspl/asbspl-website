@@ -9,6 +9,17 @@
 
 
 
+.quote-validation-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.quote-input.is-invalid {
+  border-color: #dc3545;
+}
+
 /* =========================================
    Image
 ========================================= */

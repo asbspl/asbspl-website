@@ -8,6 +8,10 @@ interface ConstructionStage {
 }
 
 const constructionStages: ConstructionStage[] = [
+    {
+    label: "Surface Preparation",
+    href: "#block-work",
+  },
   {
     label: "Block Work",
     href: "#block-work",

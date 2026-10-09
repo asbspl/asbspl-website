@@ -138,6 +138,22 @@
   color: #315b9d;
 }
 
+.hackoplast-brand {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.hackoplast-logo {
+    width: 399px;
+    background: #fac90f;
+    margin-top: 17px;
+    border-radius: 10px;
+    padding: 11px;
+}
+
 
 /* =========================================
    TABLET
@@ -259,4 +275,11 @@
   .hacking-agent-info-text {
     font-size: 17px;
   }
+
+  .hackoplast-brand {
+  display: block;
+}
+.hackoplast-logo{
+  width: 300px;
+}
 }

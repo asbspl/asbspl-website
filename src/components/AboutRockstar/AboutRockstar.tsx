@@ -11,42 +11,42 @@ const AboutRockstar: React.FC = () => {
       {/* =========================
           Hero Section
       ========================== */}
-{/* =========================
+      {/* =========================
     Hero Section
 ========================== */}
-<section
-  className="about-hero"
-  aria-labelledby="about-hero-title"
->
-  <div className="container-fluid p-0">
-    <div className="about-hero-image-wrapper">
+      <section
+        className="about-hero"
+        aria-labelledby="about-hero-title"
+      >
+        <div className="container-fluid p-0">
+          <div className="about-hero-image-wrapper">
 
-      <img
-        src={AboutHeroImg}
-        alt="Rockstar construction materials manufacturing facility"
-        className="about-hero-image"
-        loading="eager"
-        fetchPriority="high"
-      />
+            <img
+              src={AboutHeroImg}
+              alt="Rockstar construction materials manufacturing facility"
+              className="about-hero-image"
+              loading="eager"
+              fetchPriority="high"
+            />
 
-      {/* Gradient Overlay */}
-      <div className="about-hero-overlay">
-<div className="about-hero-content">
-  <h1 id="about-hero-title">
-    About Us
-  </h1>
+            {/* Gradient Overlay */}
+            <div className="about-hero-overlay">
+              <div className="about-hero-content">
+                <h1 id="about-hero-title">
+                  About Us
+                </h1>
 
-  <p>
-    We are a trusted manufacturer, exporter, and supplier of high-quality
-    construction materials, delivering reliable solutions for modern
-    construction needs.
-  </p>
-</div>
-      </div>
+                <p>
+                  We are a trusted manufacturer, exporter, and supplier of high-quality
+                  construction materials, delivering reliable solutions for modern
+                  construction needs.
+                </p>
+              </div>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       {/* =========================
           About Section
@@ -57,7 +57,7 @@ const AboutRockstar: React.FC = () => {
       >
         <div>
           <div className="row g-0 align-items-stretch about-rockstar-wrapper">
-            
+
             {/* Left Image */}
             <div className="col-lg-6">
               <div className="about-content-image">
@@ -69,7 +69,7 @@ const AboutRockstar: React.FC = () => {
                 />
 
                 <div className="rockstar-logo" aria-hidden="true">
-               <img className="rockstar-logo-img" src={rockstarlogo} alt="rockstarlogo logo" />
+                  <img className="rockstar-logo-img" src={rockstarlogo} alt="rockstarlogo logo" />
                 </div>
               </div>
             </div>
@@ -82,7 +82,11 @@ const AboutRockstar: React.FC = () => {
                 </h2>
 
                 <p>
-                  Rockstar is a leading construction materials brand by
+                  <strong>
+                    Rockstar
+                    <sup style={{ fontSize: "10px", verticalAlign: "super" }}>®</sup>
+                  </strong>{" "}
+                  is a leading construction materials brand by
                   <strong> A S Building Solutions Pvt Ltd</strong>, focused on
                   delivering high-performance dry-mix solutions for modern
                   construction.

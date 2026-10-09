@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./QuoteSection.css";
@@ -12,6 +13,11 @@ interface QuoteFormData {
   message: string;
 }
 
+interface FormErrors {
+  email?: string;
+  phone?: string;
+}
+
 const initialFormData: QuoteFormData = {
   name: "",
   email: "",
@@ -24,6 +30,7 @@ const QuoteSection = () => {
   const [formData, setFormData] =
     useState<QuoteFormData>(initialFormData);
 
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSending, setIsSending] = useState(false);
 
   const [status, setStatus] = useState<{
@@ -34,17 +41,32 @@ const QuoteSection = () => {
     message: "",
   });
 
+  // ================= HANDLE INPUT CHANGES =================
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
 
+    // Phone number: allow only digits and a maximum of 10 digits
+    const updatedValue =
+      name === "phone"
+        ? value.replace(/[^0-9]/g, "").slice(0, 10)
+        : value;
+
     setFormData((previous) => ({
       ...previous,
-      [name]: value,
+      [name]: updatedValue,
     }));
 
-    // Remove previous status message when user starts editing again
+    // Clear the corresponding error while the user edits
+    if (name === "email" || name === "phone") {
+      setErrors((previous) => ({
+        ...previous,
+        [name]: "",
+      }));
+    }
+
+    // Clear previous success/error message
     if (status.message) {
       setStatus({
         type: "",
@@ -53,14 +75,13 @@ const QuoteSection = () => {
     }
   };
 
+  // ================= FORM SUBMISSION =================
   const handleSubmit = async (
     event: FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
 
-    // ================= VALIDATION =================
-
-    // Check if any field is empty
+    // Check required fields
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -70,40 +91,38 @@ const QuoteSection = () => {
     ) {
       setStatus({
         type: "error",
-        message:
-          "Please fill in all fields before submitting the form.",
+        message: "Please fill in all fields before submitting the form.",
       });
-
       return;
     }
 
     // Email validation
-    const emailRegex =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(formData.email.trim())) {
-      setStatus({
-        type: "error",
-        message: "Please enter a valid email address.",
-      });
-
-      return;
-    }
-
-    // Phone validation
+    // Exactly 10 digits
     const phoneRegex = /^[0-9]{10}$/;
 
-    if (!phoneRegex.test(formData.phone.trim())) {
-      setStatus({
-        type: "error",
-        message:
-          "Please enter a valid 10-digit phone number.",
-      });
+    const newErrors: FormErrors = {};
 
-      return;
+    if (!emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address.";
     }
 
-    // ================= END VALIDATION =================
+    if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone =
+        "Please enter a valid 10-digit phone number.";
+    }
+
+    setErrors(newErrors);
+
+    // Stop submission if validation fails
+    if (Object.keys(newErrors).length > 0) {
+      setStatus({
+        type: "error",
+        message: "Please correct the errors before submitting.",
+      });
+      return;
+    }
 
     setIsSending(true);
 
@@ -115,51 +134,32 @@ const QuoteSection = () => {
     try {
       const formDataToSend = new FormData();
 
-      // Web3Forms Access Key
+      // Web3Forms access key
       formDataToSend.append(
         "access_key",
         "c9950aa7-8ac1-432a-ad6e-bc969e92b40a"
       );
 
       // Form fields
-      formDataToSend.append(
-        "name",
-        formData.name.trim()
-      );
-
-      formDataToSend.append(
-        "email",
-        formData.email.trim()
-      );
-
-      formDataToSend.append(
-        "address",
-        formData.address.trim()
-      );
-
-      formDataToSend.append(
-        "phone",
-        formData.phone.trim()
-      );
-
-      formDataToSend.append(
-        "message",
-        formData.message.trim()
-      );
+      formDataToSend.append("name", formData.name.trim());
+      formDataToSend.append("email", formData.email.trim());
+      formDataToSend.append("address", formData.address.trim());
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("message", formData.message.trim());
 
       // Email subject
       formDataToSend.append(
         "subject",
-        "New Enquiry - A S Building Solutions"
+        "New Enquiry - A S Building Solutions Pvt Ltd"
       );
 
       // Sender name
       formDataToSend.append(
         "from_name",
-        "A S Building Solutions Website"
+        "A S Building Solutions Pvt Ltd Website"
       );
 
-      // Send form
+      // Submit form
       const response = await fetch(
         "https://api.web3forms.com/submit",
         {
@@ -170,15 +170,16 @@ const QuoteSection = () => {
 
       const result = await response.json();
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setStatus({
           type: "success",
           message:
             "Thank you! Your enquiry has been submitted successfully. Our team will contact you soon.",
         });
 
-        // Clear form after successful submission
+        // Reset form after successful submission
         setFormData(initialFormData);
+        setErrors({});
       } else {
         setStatus({
           type: "error",
@@ -239,12 +240,11 @@ const QuoteSection = () => {
             {/* ================= RIGHT FORM ================= */}
             <div className="col-12 col-lg-6">
               <div className="quote-form-wrapper">
-
                 <h1
                   id="quote-title"
                   className="quote-title"
                 >
-                  Send an Enquiry
+                  Send An Enquiry
                 </h1>
 
                 {/* ================= SUCCESS / ERROR MESSAGE ================= */}
@@ -267,7 +267,6 @@ const QuoteSection = () => {
                   className="quote-form"
                   noValidate
                 >
-
                   {/* ================= NAME ================= */}
                   <div className="form-group">
                     <label
@@ -305,11 +304,27 @@ const QuoteSection = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="form-control quote-input"
+                      className={`form-control quote-input ${
+                        errors.email ? "is-invalid" : ""
+                      }`}
                       placeholder="Email address"
                       autoComplete="email"
+                      aria-invalid={Boolean(errors.email)}
+                      aria-describedby={
+                        errors.email ? "email-error" : undefined
+                      }
                       required
                     />
+
+                    {errors.email && (
+                      <small
+                        id="email-error"
+                        className="text-danger quote-validation-error"
+                        role="alert"
+                      >
+                        {errors.email}
+                      </small>
+                    )}
                   </div>
 
                   {/* ================= ADDRESS ================= */}
@@ -349,13 +364,30 @@ const QuoteSection = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="form-control quote-input"
+                      className={`form-control quote-input ${
+                        errors.phone ? "is-invalid" : ""
+                      }`}
                       placeholder="Phone number"
                       autoComplete="tel"
                       maxLength={10}
                       inputMode="numeric"
+                      pattern="[0-9]{10}"
+                      aria-invalid={Boolean(errors.phone)}
+                      aria-describedby={
+                        errors.phone ? "phone-error" : undefined
+                      }
                       required
                     />
+
+                    {errors.phone && (
+                      <small
+                        id="phone-error"
+                        className="text-danger quote-validation-error"
+                        role="alert"
+                      >
+                        {errors.phone}
+                      </small>
+                    )}
                   </div>
 
                   {/* ================= MESSAGE ================= */}
@@ -385,11 +417,8 @@ const QuoteSection = () => {
                     className="quote-submit-button"
                     disabled={isSending}
                   >
-                    {isSending
-                      ? "Sending..."
-                      : "Send Message"}
+                    {isSending ? "Sending..." : "Send Message"}
                   </button>
-
                 </form>
               </div>
             </div>
@@ -402,7 +431,6 @@ const QuoteSection = () => {
       <section className="cta-section">
         <div className="container">
           <div className="row align-items-center g-4">
-
             <div className="col-12 col-lg-10">
               <h2 className="cta-title">
                 QUALITY, AFFORDABLE, MANUFACTURING OF
@@ -420,7 +448,6 @@ const QuoteSection = () => {
                 </Link>
               </div>
             </div>
-
           </div>
         </div>
       </section>
